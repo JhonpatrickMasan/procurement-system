@@ -119,11 +119,13 @@
     margin-right: 20px;
     margin-left: 350px;
     padding-top: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: bottom;
     background-color: #ffffff;
     border-radius: 15px;
-    max-height: 2500px;
-    max-width: 1500px;
+    height: 800px;
+    width: 950px;
     overflow-x: auto; /* Add overflow-x for horizontal scrolling if needed */
 }
 
