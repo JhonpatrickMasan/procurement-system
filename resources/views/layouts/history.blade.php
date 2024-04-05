@@ -546,7 +546,7 @@ table td {
             // Sample data for testing
             var sampleSuppliers = [
                 { name: 'NO', category: 'Category A', id: 1, },
-                {code:"S0213080" , project:"Medical & Dental Supplies" , pmo: "NO ", activity: "NO" , mode: "NP-53.9 Small Value" , posting: "Q1-Q4" , submission: "Q4" , notice: "Q4" , con: "Q4" , funds: "GoP" , total: "100,000.00" , mooe: "100,000.00" , co: "text" , rem: "text" ,},
+                {code:"S0213080" , project:"Medical & Dental Supplies" , pmo: "NO ", activity: "NO" , mode: "NP-53.9 Small Value" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "100,000.00" , mooe: "100,000.00" , co: "text" , rem: "text" ,},
 
                 // Add more sample suppliers as needed
             ];
