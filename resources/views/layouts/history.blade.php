@@ -433,50 +433,53 @@ table td {
                     projectCell.textContent = supplier.project;
                     row.appendChild(projectCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var pmocell = document.createElement('td');
+                    pmocell.textContent = supplier.pmo;
+                    row.appendChild(pmocell);
 
                     var activityCell = document.createElement('td');
                     activityCell.textContent = supplier.activity;
                     row.appendChild(activityCell);
 
                     var modeCell = document.createElement('td');
-                    pmcCell.textContent = supplier.mode;
-                    row.appendChild(pmcCell);
+                    modeCell.textContent = supplier.mode;
+                    row.appendChild(modeCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var postingCell = document.createElement('td');
+                    postingCell.textContent = supplier.posting;
+                    row.appendChild(postingCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var submissionCell = document.createElement('td');
+                    submissionCell.textContent = supplier.submission;
+                    row.appendChild(submissionCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var noticeCell = document.createElement('td');
+                    noticeCell.textContent = supplier.notice;
+                    row.appendChild(noticeCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var concCell = document.createElement('td');
+                    concCell.textContent = supplier.con;
+                    row.appendChild(concCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var fundsCell = document.createElement('td');
+                    fundsCell.textContent = supplier.funds;
+                    row.appendChild(fundsCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var totalCell = document.createElement('td');
+                    totalCell.textContent = supplier.total;
+                    row.appendChild(totalCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var mooeCell = document.createElement('td');
+                    mooeCell.textContent = supplier.mooe;
+                    row.appendChild(mooeCell);
 
-                    var pmcCell = document.createElement('td');
-                    pmcCell.textContent = supplier.pmc;
-                    row.appendChild(pmcCell);
+                    var coCell = document.createElement('td');
+                    coCell.textContent = supplier.co;
+                    row.appendChild(coCell);
 
+                    var remCell = document.createElement('td');
+                    remCell.textContent = supplier.rem;
+                    row.appendChild(remCell);
 
                     listView.appendChild(row); // Append the row to the table body
                 });
