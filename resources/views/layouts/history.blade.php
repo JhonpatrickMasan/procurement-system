@@ -543,7 +543,7 @@ table td {
 
             // Sample data for testing
             var sampleSuppliers = [
-                { name: 'YES', category: 'Category A', id: 1, },
+                { name: 'NO', category: 'Category A', id: 1, },
 
                 // Add more sample suppliers as needed
             ];
