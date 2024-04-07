@@ -399,11 +399,11 @@ table td {
                     <th>No.</th>
                     <th>Code (PAP)</th>
                     <th>Procurement Project</th>
-                    <th>PMC/ End-User</th>
+                    <th>PM0 / End-User</th>
                     <th>Early Procurement Activity? (Yes/No)</th>
                     <th>Mode of Procurement</th>
-                    <th>Advertisement/ Posting of IB/REI</th>
-                    <th>Submission/ Opening of Bids</th>
+                    <th>Advertisement / Posting of IB/REI</th>
+                    <th>Submission / Opening of Bids</th>
                     <th>Notice of Award</th>
                     <th>Contract Signing</th>
                     <th>Source of Funds</th>
@@ -545,9 +545,16 @@ table td {
 
             // Sample data for testing
             var sampleSuppliers = [
-                { name: 'NO', category: 'Category A', id: 1, },
-                {code:"S0213080" , project:"Medical & Dental Supplies" , pmo: "NO ", activity: "NO" , mode: "NP-53.9 Small Value" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "100,000.00" , mooe: "100,000.00" , co: "text" , rem: "text" ,},
-
+                {code:"50299070" , project:"Digitization of PLM Through Integrated Systems" , pmo: "ICTO", activity: "NO" , mode: "Competitive Bidding" , posting: "Q2" , submission: "Q2" , notice: "Q2" , con: "Q2" , funds: "GoP" , total: "12,000,000.00" , mooe: "12,000,000.00" , co: "" , rem: "Resort to NP 53.14 - Online Subscription if applicable" ,},
+                {code:"50299990" , project:"Provision for Food and Materials on Student Activities" , pmo: "OGTS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "200,000.00" , mooe: "200,000.00" , co: "" , rem: "" ,},
+                {code:"10705110" , project:"Binocular Microscopes" , pmo: "CM", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "N.A." , submission: "N.A." , notice: "N.A." , con: "N.A." , funds: "GoP" , total: "660,000.00" , mooe: "" , co: "660,000.00" , rem: "" ,},
+                {code:"50213040" , project:"Soundproofing of Broadcast Room" , pmo: "CHASS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q2" , submission: "Q2" , notice: "Q3" , con: "Q3" , funds: "GoP" , total: "500,000.00" , mooe: "500,000.00" , co: "" , rem: "" ,},
+                {code:"50299990" , project:"Provision for Purchase of Cadavers" , pmo: "CM-MF", activity: "NO" , mode: "Competitive Bidding" , posting: "Q1" , submission: "Q1" , notice: "Q1" , con: "Q2" , funds: "GoP" , total: "1,056,000.00" , mooe: "1,056,000.00" , co: "" , rem: "Resort to NP-53.9 Small Value Procurement if applicable" ,},
+                {code:"50205030" , project:"Internet Subscription for PLM" , pmo: "ICTO", activity: "NO" , mode: "Competitive Bidding" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "5,000,000.00" , mooe: "5,000,000.00" , co: "" , rem: "Resort ot Direct Contracting under WETI Guidelines if applicable" ,},
+                {code:"50299990" , project:"Food and Materials for Review & Revision of Student Manual" , pmo: "OSDS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "300,000.00" , mooe: "300,000.00" , co: "" , rem: "" ,},
+                {code:"50205030" , project:"Renovation of Justo Alber Auditorium" , pmo: "PFMO", activity: "NO" , mode: "Competitive Bidding" , posting: "Q2" , submission: "Q2" , notice: "Q2" , con: "Q2" , funds: "GoP" , total: "2,981,000.00" , mooe: "" , co: "2,981,000.00" , rem: "" ,},
+                {code:"50203090" , project:"Provision of fuel for university vehicles" , pmo: "PSO", activity: "NO" , mode: "NP-53.14 Direct Retail Purchase of Petroleum Fuel, Oil and Lubricant (POL) Products and Airline Tickets" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "2,000,000.00" , mooe: "2,000,000.00" , co: "" , rem: "" ,},
+                {code:"50203080" , project:"Medical & Dental Supplies " , pmo: "UHS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "448,366.00" , mooe: "448,366.00" , co: "" , rem: "" ,},
                 // Add more sample suppliers as needed
             ];
 
