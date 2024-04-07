@@ -125,6 +125,7 @@
         border-radius: 15px;
         max-height: 400px; /* Adjust height as needed */
         height: 100%;
+        overflow: hidden;
     }
 
     #searchContainer {
@@ -179,7 +180,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 5px; /* Adjusted margin bottom */
-        margin-top: -75px;
+        margin-top: 150px;
     }
 
             #supplierNameSearchInput,
@@ -267,7 +268,8 @@
             <a href="#Dashboard" style="margin-bottom: 40px; margin-top: 40px;"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="#Information" style="margin-bottom: 40px;"><i class="fas fa-user"></i> Personal Information</a>
             <a id="#Suppliers' Database" href="{{ route('supplier.table') }}" style="margin-bottom: 40px;"><i class="fas fa-sign-out-alt"></i> Suppliers' Database </a>
-            <a id="#Suppliers' monitoring" href="{{ route('supplier.monitoring') }}" style="margin-bottom: 40px;"><i class="fas fa-sign-out-alt"></i> Suppliers' Monitoring </a>
+            <a id="Monitoring" href="{{ route('monitoring') }}" style="margin-bottom: 40px;">
+                <i class="fas fa-chart-line"></i> Procurement Monitoring</a>
             <a href="#Notifcation" style="margin-bottom: 40px;"><i class="fas fa-bell"></i> Notifications</a>
             <a href="#Template" style="margin-bottom: 200px;"><i class="fas fa-star"></i> Template Hub</a>
             <a id="logout" href="{{ url('/') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -286,17 +288,16 @@
 
         <div id="additionalPadding">
             <div id="dashboardContent">
-                <h2>Suppliers' Database</h2>
+                <h2>Suppliers' Monitoring</h2>
             </div>
         </div>
 
 
         <div id="content">
-            <div id="searchContainer" style="display: flex; align-items: center; justify-content: space-between;">
+            <div id="searchContainer">
                 <div>
-                    <label for="searchInput">Search a Supplier:</label>
+                    <label for="searchInput">Search a code:</label>
                     <input type="text" id="supplierNameSearchInput" placeholder="Search Here..." oninput="filterSupplierTable('supplierName')">
-                    <br><br>
                     <label for="searchInput">Search a Category:</label>
                     <input type="text" id="categorySearchInput" placeholder="Category..." oninput="filterSupplierTable('category')">
                     <a href="{{ route('layouts.create') }}" style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Add Supplier</a>
@@ -360,9 +361,11 @@
                 var headerRow = document.createElement('tr');
                 headerRow.innerHTML = `
                     <th>No.</th>
-                    <th>Supplier ID</th>
-                    <th>Supplier Name</th>
+                    <th>Code</th>
+                    <th>Procurement Project</th>
                     <th>Category</th>
+                    <th>PMO/End-User</th>
+                    <th>Procumrent Status</th>
                     <th>Edit Information</th>
                     <th>Delete Information</th>
                 `;
@@ -377,22 +380,18 @@
                     numberCell.textContent = index + 1; // Add 1 to index to start from 1
                     row.appendChild(numberCell);
 
-                    var idCell = document.createElement('td');
-                    idCell.textContent = supplier.id; // Assuming you have an ID property in supplier object
-                    row.appendChild(idCell);
 
-                    var nameCell = document.createElement('td');
-                    nameCell.textContent = supplier.name;
+                    var codeCell = document.createElement('td');
+                    codeCell.textContent = supplier.code; // Assuming you have an ID property in supplier object
+                    row.appendChild(codeCell);
 
-                    var infoRoute = '{{ route('info') }}';
+                    var projectCell = document.createElement('td');
+                    projectCell.textContent = supplier.project;
+                    row.appendChild(projectCell);
 
-                    nameCell.innerHTML = `<a href="${infoRoute}" style="text-decoration: none; color: black;">${supplier.name}</a>`;
-                    row.appendChild(nameCell);
-
-
-                    var categoryCell = document.createElement('td');
-                    categoryCell.textContent = supplier.category;
-                    row.appendChild(categoryCell);
+                    var pmocell = document.createElement('td');
+                    pmocell.textContent = supplier.pmo;
+                    row.appendChild(pmocell);
 
                     var editCell = document.createElement('td');
                     var editButton = document.createElement('button');
