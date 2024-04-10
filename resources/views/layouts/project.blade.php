@@ -270,7 +270,20 @@
     height: 30px;
     border-radius: 50%;
 }
-
+#details{
+    padding-top: 1000px;
+        position: relative;
+        margin-top: 350px;
+        right: 10px;
+        top: -50px;
+        padding: 10px; /* Adjusted the padding to make it smaller */
+        background-color: #fff;
+        border-radius: 4px;
+        display: center;
+        height:50px;
+        width: 920px;
+        height: 250px;
+}
 
         </style>
     </head>
@@ -314,7 +327,7 @@
 
         <div id="additionalPadding">
             <div id="dashboardContent">
-                <h2>Suppliers' Database</h2>
+                <h2>Procurement Monitoring</h2>
             </div>
         </div>
 
@@ -352,12 +365,24 @@
                     <div id="status">
                         <a style="position: relative; right: 250px; font-size: 14px;">procurement planning</a>
                         <br>
-                        <a style="position: relative; right: 150px; font-size: 14px;">Annual Procurement Plan Submission</a>
+                        <a style="position: relative; right: 190px; font-size: 14px;">Annual Procurement Plan Submission</a>
 
-                        <a style="position: relative; right: 150px; top: -20px; font-size: 14px;">procurement planning</a>
+                        <a style="position: relative; right: 120px; top: -20px; font-size: 14px;">procurement planning</a>
                         <br>
-                        <a style="position: relative; right: 150px; top: -10px; font-size: 14px;">Annual Procurement Plan Submission</a>
+                        <a style="position: relative; right: -65px; top: -20px; font-size: 14px;">Amendatory APP/Resolution</a>
 
+                        <a style="position: relative; right: -180px; top: -40px; font-size: 14px;">procurement planning</a>
+                        <br>
+                        <a style="position: relative; right: -270px; top: -40px; font-size: 14px;">Amendatory APP/Resolution</a>
+
+
+                    </div>
+
+                    <div id="fullview">
+                        <button> view Full Timeline</button>
+                    </div>
+
+                    <div id="details">
 
                     </div>
 
