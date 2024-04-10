@@ -118,19 +118,17 @@
         margin-top: 50px;
         margin-right: 50px;
         margin-left: 370px;
-        margin-bottom: 50px;
-        padding: 120px 50px;
+        padding: 50px;
         text-align: center;
         background-color: #fff;
         border-radius: 15px;
-        max-height: 400px; /* Adjust height as needed */
-        height: 100%;
-        overflow: hidden;
+        height: 600px;
+        overflow: auto;
     }
 
     #searchContainer {
         margin-bottom: 5px; /* Adjusted margin bottom */
-        margin-top: -150px;
+        margin-top: 50px;
     }
 
     table {
@@ -245,6 +243,17 @@
         color: blue; /* Change font color to blue for the active page */
     }
 
+    #title {
+    position: relative;
+    top: 200px;
+    margin-right: 20px;
+    padding-right: 40px;
+    text-align: center; /* Align the text to the left */
+    background-color: transparent;
+    border-radius: 15px;
+    height: 30px;
+}
+
         </style>
     </head>
 
@@ -268,8 +277,7 @@
             <a href="#Dashboard" style="margin-bottom: 40px; margin-top: 40px;"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="#Information" style="margin-bottom: 40px;"><i class="fas fa-user"></i> Personal Information</a>
             <a id="#Suppliers' Database" href="{{ route('supplier.table') }}" style="margin-bottom: 40px;"><i class="fas fa-sign-out-alt"></i> Suppliers' Database </a>
-            <a id="Monitoring" href="{{ route('monitoring') }}" style="margin-bottom: 40px;">
-                <i class="fas fa-chart-line"></i> Procurement Monitoring</a>
+            <a id="Monitoring" href="{{ route('monitoring') }}" style="margin-bottom: 40px;"><i class="fas fa-chart-line"></i> Procurement Monitoring</a>
             <a href="#Notifcation" style="margin-bottom: 40px;"><i class="fas fa-bell"></i> Notifications</a>
             <a href="#Template" style="margin-bottom: 200px;"><i class="fas fa-star"></i> Template Hub</a>
             <a id="logout" href="{{ url('/') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -292,6 +300,14 @@
             </div>
         </div>
 
+        <div id="title">
+            <div>
+                <label for="searchInput">Search a code:</label>
+                <input type="text" id="categorySearchInput" placeholder="Category..." oninput="filterSupplierTable('category')">
+                <a href="{{ route('layouts.create') }}" style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Add Supplier</a>
+            </div>
+        </div>
+
 
         <div id="content">
             <div id="searchContainer">
@@ -306,7 +322,7 @@
             </div>
             <table>
 
-                <tbody id="supplierListView">
+                <tbody id="supplierListView" style = "overflow: auto;">
                     <!-- Supplier list view will be dynamically populated here -->
                 </tbody>
             </table>
@@ -367,7 +383,6 @@
                     <th>PMO/End-User</th>
                     <th>Procumrent Status</th>
                     <th>Edit Information</th>
-                    <th>Delete Information</th>
                 `;
                 listView.appendChild(headerRow);
 
@@ -389,9 +404,17 @@
                     projectCell.textContent = supplier.project;
                     row.appendChild(projectCell);
 
+                    var catcell = document.createElement('td');
+                    catcell.textContent = supplier.cat;
+                    row.appendChild(catcell);
+
                     var pmocell = document.createElement('td');
                     pmocell.textContent = supplier.pmo;
                     row.appendChild(pmocell);
+
+                    var statusCell = document.createElement('td');
+                    statusCell.innerHTML = '<button>Status</button>'; // Example delete button
+                    row.appendChild(statusCell);
 
                     var editCell = document.createElement('td');
                     var editButton = document.createElement('button');
@@ -401,10 +424,6 @@
                     };
                     editCell.appendChild(editButton);
                     row.appendChild(editCell);
-
-                    var deleteCell = document.createElement('td');
-                    deleteCell.innerHTML = '<button>Delete</button>'; // Example delete button
-                    row.appendChild(deleteCell);
 
                     listView.appendChild(row); // Append the row to the table body
                 });
@@ -473,17 +492,7 @@
             // Sample data for testing
             var sampleSuppliers = [
                 { name: 'Jollibee Foods Corporation', category: 'Goods', id: 1},
-                { name: 'Freetos Caterine Services', category: 'Goods', id: 2 },
-                { name: '3CA Construction', category: 'Infrastructure', id: 3 },
-                { name: 'PLDT INC. Corporation', category: 'Consulting Services', id: 1 },
-                { name: 'San Miguel Food & Beverage, INC.', category: 'Goods', id: 2 },
-                { name: 'Robinsons Retail Holdings, INC.', category: 'Goods', id: 3 },
-                { name: 'Universal Robina Corporation', category: 'Goods', id: 1 },
-                { name: 'DMCI Project Developers INC.', category: 'Infrastructure', id: 2 },
-                { name: 'MEGAWIDE Construction Corp', category: 'Infrastructure', id: 3 },
-                { name: 'Converge ICT Solution, INC.', category: 'Consulting Services', id: 1 },
-                { name: 'Globe Telecom, INC.', category: 'Consulting Services', id: 2 },
-                { name: 'BDO Unibank INC.', category: 'Consulting Services', id: 3 },
+                {code: '', project: '', cat: '', pmo: '', }
                 // Add more sample suppliers as needed
             ];
 

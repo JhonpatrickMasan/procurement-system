@@ -123,8 +123,7 @@
     text-align: center;
     background-color: #fff;
     border-radius: 15px;
-    max-height: 400px; /* Adjust height as needed */
-    height: 100%;
+    height: 450px;
 }
 
 #searchContainer {
@@ -364,7 +363,6 @@ a[href="{{ route('layouts.create') }}"] {
                 <th>Supplier Name</th>
                 <th>Category</th>
                 <th>Edit Information</th>
-                <th>Delete Information</th>
             `;
             listView.appendChild(headerRow);
 
@@ -402,11 +400,6 @@ a[href="{{ route('layouts.create') }}"] {
                 };
                 editCell.appendChild(editButton);
                 row.appendChild(editCell);
-
-                var deleteCell = document.createElement('td');
-                deleteCell.innerHTML = '<button>Delete</button>'; // Example delete button
-                row.appendChild(deleteCell);
-
                 listView.appendChild(row); // Append the row to the table body
             });
         }
