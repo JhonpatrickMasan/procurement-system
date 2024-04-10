@@ -402,7 +402,11 @@
 
                     var projectCell = document.createElement('td');
                     projectCell.textContent = supplier.project;
-                    row.appendChild(projectCell);
+
+                var infoRoute = '{{ route('project') }}';
+
+                projectCell.innerHTML = `<a href="${infoRoute}" style="text-decoration: none; color: black;">${supplier.name}</a>`;
+                row.appendChild(projectCell);
 
                     var catcell = document.createElement('td');
                     catcell.textContent = supplier.cat;

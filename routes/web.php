@@ -49,6 +49,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/monitoring', function () {
         return view('layouts.monitoring');
     })->name('monitoring');
+    Route::get('/project', function () {
+        return view('layouts.project');
+    })->name('project');
 
 
 
