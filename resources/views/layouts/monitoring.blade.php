@@ -495,7 +495,8 @@
 
             // Sample data for testing
             var sampleSuppliers = [
-                { name: 'Jollibee Foods Corporation', category: 'Goods', id: 1},
+                { name: 'Digitization of PLM Through Integrated Systems', category: 'ICTO', id: 1},
+                { name: 'Purchase of Medical Equipment', category: 'CN', id: 1},
                 {code: '', project: '', cat: '', pmo: '', }
                 // Add more sample suppliers as needed
             ];
