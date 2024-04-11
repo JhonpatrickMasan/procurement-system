@@ -497,6 +497,9 @@
             var sampleSuppliers = [
                 { name: 'Digitization of PLM Through Integrated Systems', category: 'ICTO', id: 1},
                 { name: 'Purchase of Medical Equipment', category: 'CN', id: 1},
+                { name: 'Medical & Dental Supplies', category: 'UHS', id: 1},
+                { name: 'Binocular Microscopes', category: 'CM', id: 1},
+                { name: 'enovation of Justo Albert Auditorium', category: 'PFMO', id: 1},
                 {code: '', project: '', cat: '', pmo: '', }
                 // Add more sample suppliers as needed
             ];
