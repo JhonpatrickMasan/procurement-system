@@ -566,12 +566,30 @@
             }
 
             // Sample data for testing
-<<<<<<< HEAD
             var sampleSuppliers = [{
-                    name: 'Jollibee Foods Corporation',
-                    category: 'Goods',
-                    id: 1,
-                    status: 'Completed',
+                    name: 'Digitization of PLM Through Integrated Systems',
+                    category: 'ICTO',
+                    id: 1
+                },
+                {
+                    name: 'Purchase of Medical Equipment',
+                    category: 'CN',
+                    id: 1
+                },
+                {
+                    name: 'Medical & Dental Supplies',
+                    category: 'UHS',
+                    id: 1
+                },
+                {
+                    name: 'Binocular Microscopes',
+                    category: 'CM',
+                    id: 1
+                },
+                {
+                    name: 'enovation of Justo Albert Auditorium',
+                    category: 'PFMO',
+                    id: 1
                 },
                 {
                     code: '',
@@ -579,15 +597,6 @@
                     cat: '',
                     pmo: '',
                 }
-=======
-            var sampleSuppliers = [
-                { name: 'Digitization of PLM Through Integrated Systems', category: 'ICTO', id: 1},
-                { name: 'Purchase of Medical Equipment', category: 'CN', id: 1},
-                { name: 'Medical & Dental Supplies', category: 'UHS', id: 1},
-                { name: 'Binocular Microscopes', category: 'CM', id: 1},
-                { name: 'enovation of Justo Albert Auditorium', category: 'PFMO', id: 1},
-                {code: '', project: '', cat: '', pmo: '', }
->>>>>>> 79b1f9441d5be46cc19db7a0aa02af7183990cc7
                 // Add more sample suppliers as needed
             ];
 
