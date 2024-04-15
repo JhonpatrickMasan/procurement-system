@@ -1,4 +1,5 @@
 <x-layouts.app>
+
     <head>
         <livewire:styles />
         <meta charset="UTF-8">
@@ -6,39 +7,50 @@
         <title>Dashboard</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <style>
-            body, html {
+            body,
+            html {
                 margin: 0;
                 padding: 0;
                 font-family: 'Inter', sans-serif;
                 background-color: #D6D7D8f0;
-                overflow-y: auto; /* Prevent scrolling */
+                overflow-y: auto;
+                /* Prevent scrolling */
             }
 
             #menu {
-        position: absolute; /* Change position to absolute */
-        background-color: #2D349A;
-        color: #fff;
-        padding: 40px;
-        text-align: left;
-        width: 240px;
-        height: auto;
-        overflow-y: auto;
-        z-index: 500;
-        top: 102px; /* Position menu at the top of the viewport */
-        left: 0; /* Position menu at the left of the viewport */
-    }
+                position: absolute;
+                /* Change position to absolute */
+                background-color: #2D349A;
+                color: #fff;
+                padding: 40px;
+                text-align: left;
+                width: 240px;
+                height: auto;
+                overflow-y: auto;
+                z-index: 500;
+                top: 102px;
+                /* Position menu at the top of the viewport */
+                left: 0;
+                /* Position menu at the left of the viewport */
+            }
 
             #userPhoto {
-                width: 100px; /* Set the width of the profile photo */
-                height: 100px; /* Set the height of the profile photo */
-                border-radius: 50%; /* Make it circular */
-                margin-bottom: 10px; /* Added margin below the user's position */
+                width: 100px;
+                /* Set the width of the profile photo */
+                height: 100px;
+                /* Set the height of the profile photo */
+                border-radius: 50%;
+                /* Make it circular */
+                margin-bottom: 10px;
+                /* Added margin below the user's position */
                 overflow: hidden;
             }
 
             #userPhoto img {
-                width: 100%; /* Make the image fill the container */
-                height: auto; /* Maintain aspect ratio */
+                width: 100%;
+                /* Make the image fill the container */
+                height: auto;
+                /* Maintain aspect ratio */
             }
 
             /* Separator added below the user's position */
@@ -54,25 +66,29 @@
             #userName {
                 color: #fff;
                 font-weight: bold;
-                margin-bottom: 10px; /* Added margin below the user's name */
+                margin-bottom: 10px;
+                /* Added margin below the user's name */
             }
 
             #welcomeText {
                 color: #fff;
-                margin-bottom: 20px; /* Added margin below the welcome text */
+                margin-bottom: 20px;
+                /* Added margin below the welcome text */
             }
 
             #menu a {
                 color: #fff;
                 text-decoration: none;
-                margin: 15px 0; /* Adjusted vertical margin */
+                margin: 15px 0;
+                /* Adjusted vertical margin */
                 font-size: 16px;
                 display: flex;
                 align-items: center;
             }
 
             #menu a i {
-                margin-right: 10px; /* Added margin to the right of the icon */
+                margin-right: 10px;
+                /* Added margin to the right of the icon */
             }
 
             #menu a:hover {
@@ -82,9 +98,11 @@
             #logout {
                 color: #fff;
                 text-decoration: none;
-                margin-top: auto !important; /* Set margin-top to auto */
+                margin-top: auto !important;
+                /* Set margin-top to auto */
                 font-size: 16px;
-                cursor: pointer; /* Added cursor style */
+                cursor: pointer;
+                /* Added cursor style */
             }
 
             #topNav {
@@ -104,7 +122,8 @@
                 margin-top: 30px;
                 margin-right: 50px;
                 margin-left: 370px;
-                padding: 5px; /* Adjusted the padding to make it smaller */
+                padding: 5px;
+                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 15px;
                 display: flex;
@@ -115,32 +134,36 @@
 
 
             #content {
-        margin-top: 50px;
-        margin-right: 50px;
-        margin-left: 370px;
-        padding: 50px;
-        text-align: center;
-        background-color: #fff;
-        border-radius: 15px;
-        height: 600px;
-        overflow: auto;
-    }
+                margin-top: 50px;
+                margin-right: 50px;
+                margin-left: 370px;
+                padding: 50px;
+                text-align: center;
+                background-color: #fff;
+                border-radius: 15px;
+                height: 600px;
+                overflow: auto;
+            }
 
-    #searchContainer {
-        margin-bottom: 5px; /* Adjusted margin bottom */
-        margin-top: 50px;
-    }
+            #searchContainer {
+                margin-bottom: 5px;
+                /* Adjusted margin bottom */
+                margin-top: 50px;
+            }
 
-    table {
-        width: 100%; /* Set table width to 100% */
-        border-collapse: collapse;
-        border-radius: 15px; /* Added rounded corners */
-    }
+            table {
+                width: 100%;
+                /* Set table width to 100% */
+                border-collapse: collapse;
+                border-radius: 15px;
+                /* Added rounded corners */
+            }
 
-    table th, table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-    }
+            table th,
+            table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
 
             #welcomeMessage {
                 font-size: 18px;
@@ -173,116 +196,137 @@
                 margin-left: 10px;
                 opacity: 1.0;
             }
+
             #searchContainer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px; /* Adjusted margin bottom */
-        margin-top: 150px;
-    }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 5px;
+                /* Adjusted margin bottom */
+                margin-top: 150px;
+            }
 
             #supplierNameSearchInput,
-    #categorySearchInput {
-        margin-top: 0; /* Adjusted margin top */
-        margin-bottom: 10px; /* Adjusted margin bottom */
-        border: 2px solid black;
-        border-radius: 8px;
-        background-color: #F0F0F0;
-        outline: none;
-        width: 200px;
-        height: 30px;
-        margin-right: 10px; /* Add margin between the inputs and the button */
-        opacity: 1.0;
-    }
+            #categorySearchInput {
+                margin-top: 0;
+                /* Adjusted margin top */
+                margin-bottom: 10px;
+                /* Adjusted margin bottom */
+                border: 2px solid black;
+                border-radius: 8px;
+                background-color: #F0F0F0;
+                outline: none;
+                width: 200px;
+                height: 30px;
+                margin-right: 10px;
+                /* Add margin between the inputs and the button */
+                opacity: 1.0;
+            }
 
-    a[href="{{ route('layouts.create') }}"] {
-        background-color: green;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-left: 10px; /* Adjusted margin */
-    }
+            a[href="{{ route('layouts.create') }}"] {
+                background-color: green;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin-left: 10px;
+                /* Adjusted margin */
+            }
 
-    #supplierListView {
-                margin-top: 20px; /* Adjust margin */
+            #supplierListView {
+                margin-top: 20px;
+                /* Adjust margin */
                 width: 100%;
             }
 
             .supplierListItem {
                 display: flex;
                 justify-content: space-between;
-                padding: 10px 20px; /* Adjust padding */
-                border-bottom: 1px solid #ddd; /* Add bottom border */
+                padding: 10px 20px;
+                /* Adjust padding */
+                border-bottom: 1px solid #ddd;
+                /* Add bottom border */
             }
 
             .supplierListItem:last-child {
-                border-bottom: none; /* Remove bottom border for the last item */
+                border-bottom: none;
+                /* Remove bottom border for the last item */
             }
 
-            .supplierListItem > span {
-                flex: 1; /* Distribute space evenly */
+            .supplierListItem>span {
+                flex: 1;
+                /* Distribute space evenly */
             }
 
-    #pagination {
-        text-align: center; /* Center the pagination */
-        margin-top: 20px; /* Add margin between table and pagination */
-        margin-right: 150px;
-        font-weight: bold;
-    }
+            #pagination {
+                text-align: center;
+                /* Center the pagination */
+                margin-top: 20px;
+                /* Add margin between table and pagination */
+                margin-right: 150px;
+                font-weight: bold;
+            }
 
-    #pagination a {
-        color: black; /* Change font color to black */
-        text-decoration: none; /* Remove underline */
-        margin: 0 5px; /* Add margin between pages */
-        margin-left: 25px;
-        font-weight: bold;
-    }
+            #pagination a {
+                color: black;
+                /* Change font color to black */
+                text-decoration: none;
+                /* Remove underline */
+                margin: 0 5px;
+                /* Add margin between pages */
+                margin-left: 25px;
+                font-weight: bold;
+            }
 
-    #pagination a.active {
-        color: blue; /* Change font color to blue for the active page */
-    }
+            #pagination a.active {
+                color: blue;
+                /* Change font color to blue for the active page */
+            }
 
-    #title {
-    position: relative;
-    top: 200px;
-    margin-right: 20px;
-    padding-right: 40px;
-    text-align: center; /* Align the text to the left */
-    background-color: transparent;
-    border-radius: 15px;
-    height: 30px;
-}
-
+            #title {
+                position: relative;
+                top: 200px;
+                margin-right: 20px;
+                padding-right: 40px;
+                text-align: center;
+                /* Align the text to the left */
+                background-color: transparent;
+                border-radius: 15px;
+                height: 30px;
+            }
         </style>
     </head>
 
     <body>
         <div id="menu">
             @auth
-            <div id="userPhoto">
-                @if(auth()->user()->profile_photo_path)
-                    <img src="{{ asset('storage/' . auth()->user()->profile_photo_path) }}" alt="Profile Photo">
-                @else
-                    <!-- Default profile photo or placeholder image -->
-                    <img src="{{ asset('storage/UoAqIOtb87mT4dmcvldVz6GyFtljRv-metaMzc1NDU1MTcxXzE4MDM1MDU3MDAwNTE3MzVfMzQyODU0NzAzNjI2NTM4MDk5MV9uLmpwZw==-.jpg') }}" alt="Profile Photo">
-                @endif
-            </div>
+                <div id="userPhoto">
+                    @if (auth()->user()->profile_photo_path)
+                        <img src="{{ asset('storage/' . auth()->user()->profile_photo_path) }}" alt="Profile Photo">
+                    @else
+                        <!-- Default profile photo or placeholder image -->
+                        <img src="{{ asset('storage/UoAqIOtb87mT4dmcvldVz6GyFtljRv-metaMzc1NDU1MTcxXzE4MDM1MDU3MDAwNTE3MzVfMzQyODU0NzAzNjI2NTM4MDk5MV9uLmpwZw==-.jpg') }}"
+                            alt="Profile Photo">
+                    @endif
+                </div>
 
-            <div id="welcomeText">Welcome!</div>
-            <div id="userName">{{ auth()->user()->name }}</div>
-            <div id="userPosition">{{ auth()->user()->position }}</div>
-            <!-- Separator -->
-            <div id="userPositionSeparator"></div>
-            <a href="#Dashboard" style="margin-bottom: 40px; margin-top: 40px;"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a href="#Information" style="margin-bottom: 40px;"><i class="fas fa-user"></i> Personal Information</a>
-            <a id="#Suppliers' Database" href="{{ route('supplier.table') }}" style="margin-bottom: 40px;"><i class="fas fa-sign-out-alt"></i> Suppliers' Database </a>
-            <a id="Monitoring" href="{{ route('monitoring') }}" style="margin-bottom: 40px;"><i class="fas fa-chart-line"></i> Procurement Monitoring</a>
-            <a href="#Notifcation" style="margin-bottom: 40px;"><i class="fas fa-bell"></i> Notifications</a>
-            <a href="#Template" style="margin-bottom: 200px;"><i class="fas fa-star"></i> Template Hub</a>
-            <a id="logout" href="{{ url('/') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <div id="welcomeText">Welcome!</div>
+                <div id="userName">{{ auth()->user()->name }}</div>
+                <div id="userPosition">{{ auth()->user()->position }}</div>
+                <!-- Separator -->
+                <div id="userPositionSeparator"></div>
+                <a href="#Dashboard" style="margin-bottom: 40px; margin-top: 40px;"><i class="fas fa-tachometer-alt"></i>
+                    Dashboard</a>
+                <a href="#Information" style="margin-bottom: 40px;"><i class="fas fa-user"></i> Personal Information</a>
+                <a id="#Suppliers' Database" href="{{ route('supplier.table') }}" style="margin-bottom: 40px;"><i
+                        class="fas fa-sign-out-alt"></i> Suppliers' Database </a>
+                <a id="Monitoring" href="{{ route('monitoring') }}" style="margin-bottom: 40px;"><i
+                        class="fas fa-chart-line"></i> Procurement Monitoring</a>
+                <a href="#Notifcation" style="margin-bottom: 40px;"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#Template" style="margin-bottom: 200px;"><i class="fas fa-star"></i> Template Hub</a>
+                <a id="logout" href="{{ url('/') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             @else
-            <p>You are not authenticated.</p>
+                <p>You are not authenticated.</p>
             @endauth
         </div>
 
@@ -303,8 +347,11 @@
         <div id="title">
             <div>
                 <label for="searchInput">Search a code:</label>
-                <input type="text" id="categorySearchInput" placeholder="Category..." oninput="filterSupplierTable('category')">
-                <a href="{{ route('layouts.create') }}" style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Add Supplier</a>
+                <input type="text" id="categorySearchInput" placeholder="Category..."
+                    oninput="filterSupplierTable('category')">
+                <a href="{{ route('layouts.create') }}"
+                    style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Add
+                    Supplier</a>
             </div>
         </div>
 
@@ -313,10 +360,14 @@
             <div id="searchContainer">
                 <div>
                     <label for="searchInput">Search a code:</label>
-                    <input type="text" id="supplierNameSearchInput" placeholder="Search Here..." oninput="filterSupplierTable('supplierName')">
+                    <input type="text" id="supplierNameSearchInput" placeholder="Search Here..."
+                        oninput="filterSupplierTable('supplierName')">
                     <label for="searchInput">Search a Category:</label>
-                    <input type="text" id="categorySearchInput" placeholder="Category..." oninput="filterSupplierTable('category')">
-                    <a href="{{ route('layouts.create') }}" style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Add Supplier</a>
+                    <input type="text" id="categorySearchInput" placeholder="Category..."
+                        oninput="filterSupplierTable('category')">
+                    <a href="{{ route('layouts.create') }}"
+                        style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Add
+                        Supplier</a>
                 </div>
 
             </div>
@@ -331,45 +382,45 @@
                 <!-- Pagination links will be dynamically populated here -->
             </div>
 
-            </div>
-            <script>
-                function toggleSearchIcon() {
-                    var searchInput = document.getElementById('searchInput');
-                    var searchIcon = document.getElementById('searchIcon');
+        </div>
+        <script>
+            function toggleSearchIcon() {
+                var searchInput = document.getElementById('searchInput');
+                var searchIcon = document.getElementById('searchIcon');
 
-                    if (searchInput.value.trim() !== '') {
-                        searchIcon.style.display = 'none';
-                    } else {
-                        searchIcon.style.display = 'block';
-                    }
+                if (searchInput.value.trim() !== '') {
+                    searchIcon.style.display = 'none';
+                } else {
+                    searchIcon.style.display = 'block';
                 }
+            }
 
-                function filterSupplierTable(filterType) {
-                    var input, filter, table, tr, td, i, txtValue;
-                    if (filterType === 'supplierName') {
-                        input = document.getElementById("supplierNameSearchInput");
-                        filter = input.value.toUpperCase();
-                    } else {
-                        input = document.getElementById("categorySearchInput");
-                        filter = input.value.toUpperCase();
-                    }
-                    table = document.getElementById("supplierListView");
-                    tr = table.getElementsByClassName("supplierListItem");
-                    for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("span")[0]; // Changed index to 0 to target the name span
-                        if (td) {
-                            txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                            } else {
-                                tr[i].style.display = "none";
-                            }
+            function filterSupplierTable(filterType) {
+                var input, filter, table, tr, td, i, txtValue;
+                if (filterType === 'supplierName') {
+                    input = document.getElementById("supplierNameSearchInput");
+                    filter = input.value.toUpperCase();
+                } else {
+                    input = document.getElementById("categorySearchInput");
+                    filter = input.value.toUpperCase();
+                }
+                table = document.getElementById("supplierListView");
+                tr = table.getElementsByClassName("supplierListItem");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("span")[0]; // Changed index to 0 to target the name span
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
                         }
                     }
                 }
+            }
 
-                // Function to populate the supplier list view
-                function populateSupplierListView(suppliers) {
+            // Function to populate the supplier list view
+            function populateSupplierListView(suppliers) {
                 var listView = document.getElementById('supplierListView');
                 listView.innerHTML = ''; // Clear previous content
 
@@ -403,10 +454,11 @@
                     var projectCell = document.createElement('td');
                     projectCell.textContent = supplier.project;
 
-                var infoRoute = '{{ route('project') }}';
+                    var infoRoute = '{{ route('project') }}';
 
-                projectCell.innerHTML = `<a href="${infoRoute}" style="text-decoration: none; color: black;">${supplier.name}</a>`;
-                row.appendChild(projectCell);
+                    projectCell.innerHTML =
+                        `<a href="${infoRoute}" style="text-decoration: none; color: black;">${supplier.name}</a>`;
+                    row.appendChild(projectCell);
 
                     var catcell = document.createElement('td');
                     catcell.textContent = supplier.cat;
@@ -416,9 +468,29 @@
                     pmocell.textContent = supplier.pmo;
                     row.appendChild(pmocell);
 
-                    var statusCell = document.createElement('td');
-                    statusCell.innerHTML = '<button>Status</button>'; // Example delete button
-                    row.appendChild(statusCell);
+                    var statusCell = document.createElement('td'); // Create a table cell for status
+                    var statusText = document.createElement('span'); // Create a span element for status text
+                    statusText.textContent = supplier.status; // Set the text content to the status
+
+                    // Apply styles to the status text
+                    statusText.style.fontWeight = 'bold'; // Bold font weight
+                    statusText.style.borderRadius = '5px'; // Rounded corners
+                    statusText.style.padding = '3px 6px'; // Padding for better appearance
+
+
+                    // Set background color based on status
+                    if (supplier.status === 'Completed') {
+                        statusText.style.backgroundColor = '#33FF00'; // Green for completed status
+                    } else if (supplier.status === 'Failed') {
+                        statusText.style.backgroundColor = '#FF9090'; // Pink for failed status
+                    } else if (supplier.status === 'Ongoing') {
+                        statusText.style.backgroundColor = '#FFB800'; // Orange for ongoing status
+                    }
+
+                    statusCell.appendChild(statusText); // Append the status text to the cell
+
+                    row.appendChild(statusCell); // Append the status cell to the row
+
 
                     var editCell = document.createElement('td');
                     var editButton = document.createElement('button');
@@ -494,19 +566,28 @@
             }
 
             // Sample data for testing
-            var sampleSuppliers = [
-                { name: 'Jollibee Foods Corporation', category: 'Goods', id: 1},
-                {code: '', project: '', cat: '', pmo: '', }
+            var sampleSuppliers = [{
+                    name: 'Jollibee Foods Corporation',
+                    category: 'Goods',
+                    id: 1,
+                    status: 'Completed',
+                },
+                {
+                    code: '',
+                    project: '',
+                    cat: '',
+                    pmo: '',
+                }
                 // Add more sample suppliers as needed
             ];
 
             // Populate the supplier list view and pagination on page load
             document.addEventListener('DOMContentLoaded', function() {
                 populateSupplierListView(sampleSuppliers.slice(0, 10)); // Initial population with first 10 items
-                populatePaginationLinks(1, Math.ceil(sampleSuppliers.length / 10)); // Calculate total pages based on data length
+                populatePaginationLinks(1, Math.ceil(sampleSuppliers.length /
+                    10)); // Calculate total pages based on data length
             });
-
-            </script>
+        </script>
 
     </body>
-    </x-layouts.app>
+</x-layouts.app>
