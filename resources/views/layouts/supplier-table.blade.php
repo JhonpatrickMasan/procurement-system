@@ -285,7 +285,7 @@ a[href="{{ route('layouts.create') }}"] {
 
     <div id="additionalPadding">
         <div id="dashboardContent">
-            <h2>Suppliers' Database</h2>
+            <h2>Supplierssss' Database</h2>
         </div>
     </div>
 
