@@ -492,6 +492,231 @@
                 width: 365px;
                 height: 50px;
             }
+
+            #Annualheader {
+                position: relative;
+                margin-top: 120px;
+                right: 10px;
+                top: -400px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 50px;
+            }
+
+            #AnnualInfo {
+                position: relative;
+                margin-top: 120px;
+                right: 10px;
+                top: -500px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 550px;
+            }
+
+            #annualContainerGrid {
+                position: relative;
+                top: 40px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 10px;
+                /* 3 columns */
+                gap: 20px;
+                /* Spacing between text containers */
+                justify-items: center;
+                /* Center align items horizontally */
+                margin-bottom: 20px;
+            }
+
+            .annual-container {
+                border: 2px solid #000;
+                padding: 10px;
+                width: 300px;
+                /* Adjust width as needed */
+                background-color: #E8E8E8;
+                border-radius: 5px;
+                height: 5px;
+                margin-bottom: 20px;
+            }
+
+            .annual-text {
+                position: absolute;
+                top: -23px;
+                right: 80px;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                color: #333;
+            }
+
+            #sourceFunds {
+                position: relative;
+                margin-top: 10px;
+                right: 10px;
+                top: 100px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 100px;
+            }
+
+            #FundsGrid {
+                position: relative;
+                top: 40px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                column-gap: 10px;
+                /* 3 columns */
+                gap: 20px;
+                /* Spacing between text containers */
+                justify-items: center;
+                /* Center align items horizontally */
+                margin-bottom: 20px;
+            }
+
+            .Funds-container {
+                border: 2px solid #000;
+                padding: 10px;
+                width: 800px;
+                /* Adjust width as needed */
+                background-color: #E8E8E8;
+                border-radius: 5px;
+                height: 5px;
+                margin-bottom: 20px;
+            }
+
+            .Funds-text {
+                position: absolute;
+                top: -23px;
+                right: 320px;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                color: #333;
+            }
+
+            #ABCdetails {
+                position: relative;
+                margin-top: 10px;
+                right: 10px;
+                top: -50px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 100px;
+            }
+
+            #ABCGrid {
+                position: relative;
+                top: 40px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 10px;
+                /* 3 columns */
+                gap: 20px;
+                /* Spacing between text containers */
+                justify-items: center;
+                /* Center align items horizontally */
+                margin-bottom: 20px;
+            }
+
+            .ABC-container {
+                border: 2px solid #000;
+                padding: 10px;
+                width: 200px;
+                /* Adjust width as needed */
+                background-color: #E8E8E8;
+                border-radius: 5px;
+                height: 5px;
+                margin-bottom: 20px;
+            }
+
+            .ABC-text {
+                position: absolute;
+                top: -23px;
+                right: 65px;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                color: #333;
+            }
+
+            #observerFunds {
+                position: relative;
+                margin-top: 10px;
+                right: 10px;
+                top: -30px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 100px;
+
+            }
+
+            #dateheader {
+                position: relative;
+                margin-top: 120px;
+                right: 10px;
+                top: -110px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 50px;
+            }
+
+            #invitationInfo {
+                position: relative;
+                margin-top: 120px;
+                right: 10px;
+                top: -210px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 350px;
+
+
+            }
+
+            #remarks {
+                position: relative;
+                margin-top: 10px;
+                right: 10px;
+                top: -170px;
+                padding: 10px;
+                /* Adjusted the padding to make it smaller */
+                background-color: #fff;
+                border-radius: 4px;
+                display: center;
+                height: 50px;
+                width: 935px;
+                height: 100px;
+            }
         </style>
     </head>
 
@@ -546,7 +771,7 @@
         <div id="content">
             <div id="header">
                 <h3 style = "position: relative; right: 280px; top: -5px;">Information Technology Equipment</h3>
-                <a href="{{ route('layouts.create') }}"
+                <a href="{{ route('amendment') }}"
                     style="background-color: #9B760A; color: white; border-radius: 5px; text-decoration: none; position: relative; top: -40px; margin-left:400px;">Amendment</a>
                 <a href="{{ route('layouts.create') }}"
                     style="background-color: green; color: white; border-radius: 5px; text-decoration: none; position: relative; top: -40px;">
@@ -594,8 +819,8 @@
 
                 </div>
 
-                <div id="fullview" style = "position: relative; top: 100px;">
-                    <button> view Full Timeline</button>
+                <div id="fullview" style="position: relative; top: 100px;">
+                    <a href="{{ route('timeline') }}"><button>View Full Timeline</button></a>
                 </div>
 
                 <div id="details">
@@ -669,19 +894,306 @@
                                 <h4 style = "position: relative; top: -4px;">Actions</h4>
                             </div>
 
+                            <div id = "conferencestatus">
+                                <h4 style = "position: relative; right: 110px; top: -4px;">Bidding Document with ITB
+                                    <h4 style = "position: relative; left: 150px; top: -45px;">statuses</h4>
+                            </div>
+
+                            <div id = "conferencestatus1">
+                                <button style = "position: relative; top: -4px;">Approved</button>
+                                <button style = "position: relative; top: -4px;">Reject</button>
+                                <button style = "position: relative; top: -4px;">View Document</button>
+                            </div>
+
+                            <div id = "conferencestatus">
+                                <h4 style = "position: relative; right: 70px; top: -4px;">Minutes of Pre-Procurement
+                                    Conference
+                                </h4>
+                                <h4 style = "position: relative; left: 150px; top: -45px;">statuses</h4>
+                            </div>
+
+                            <div id = "conferencestatus1">
+                                <button style = "position: relative; top: -4px;">Approved</button>
+                                <button style = "position: relative; top: -4px;">Reject</button>
+                                <button style = "position: relative; top: -4px;">View Document</button>
+                            </div>
+
                         </div>
 
+                        <div id = "Annualheader">
+                            <h2 style = "position:relative; top: -7px;">Annual Procurement Activities</h2>
+                        </div>
 
-                    </div>
-                </div>
+                        <div id = "AnnualInfo">
+                            <div id="annualContainerGrid">
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -80px;">
+                                        <p> Pre-Proc Conference:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-56px;">Details 1</p>
+                                </div>
 
-            </div>
+                                <div class="annual-container" style = "position: relative; right: 100px;">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -95px;">
+                                        <p>Ads/Post of IB:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-56px;">Details 1</p>
+                                </div>
 
-        </div>
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -35px;">
+                                        <p>Pre-bid Conference:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-56px;">Details 1</p>
+                                </div>
 
-        </div>
+                                <div class="annual-container" style = "position: relative; right: 100px;">
+                                    <div id = "text"
+                                        style = "position: relative; top: -50px; left: -7px; display:inline-flex;">
+                                        <p>Eligibility Check:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-74px;">Details 1</p>
+                                </div>
 
-        </div>
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Sub/Open of Bids:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container" style = "position: relative; right: 100px;">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Bid Evaluation:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Post Qual:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container" style = "position: relative; right: 100px;">
+                                    <div id = "text"
+                                        style = "position: relative; top: -50px; left: -7px; display:inline-flex;">
+                                        <p>Date of BAC Resolution Recommending Award:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-73px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Notice of Award:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container" style = "position: relative; right: 100px;">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Contract Signing:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Notice to Proceed:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container" style = "position: relative; right: 100px;">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Delivery/Completion:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                                <div class="annual-container">
+                                    <div id = "text" style = "position: relative; top: -50px; left: -29px;">
+                                        <p>Inspection & Acceptance:</p>
+                                    </div>
+                                    <p class="annual-text" style = "position: relative; top:-58px;">Details 1</p>
+                                </div>
+
+                            </div>
+                            <div id = "sourceFunds">
+                                <div id="FundsGrid">
+                                    <div class="Funds-container">
+                                        <div id = "text" style = "position: relative; top: -50px; left: -340px;">
+                                            <p>Source of Funds:</p>
+                                        </div>
+                                        <p class="Funds-text" style = "position: relative; top:-56px;">Details 1</p>
+                                    </div>
+                                </div>
+                                <div id = "contactheader">
+                                    <h2 style = "position:relative; top: -7px;"> ABC (PhP)</h2>
+                                </div>
+                                <div id = "ABCdetails">
+                                    <div id="ABCGrid">
+                                        <div class="ABC-container">
+                                            <div id = "text"
+                                                style = "position: relative; top: -50px; left: -80px;">
+                                                <p>Total:</p>
+                                            </div>
+                                            <p class="ABC-text" style = "position: relative; top:-56px;">Details 1
+                                            </p>
+                                        </div>
+
+                                        <div class="ABC-container">
+                                            <div id = "text"
+                                                style = "position: relative; top: -50px; left: -70px;">
+                                                <p>MOOE:</p>
+                                            </div>
+                                            <p class="ABC-text" style = "position: relative; top:-56px;">Details 1
+                                            </p>
+                                        </div>
+
+                                        <div class="ABC-container">
+                                            <div id = "text"style="position: relative; top: -50px; left: -85px;">
+                                                <p>CO:</p>
+                                            </div>
+                                            <p class="ABC-text" style = "position: relative; top:-56px;">Details 1
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id = "contactheader">
+                                        <h2 style = "position:relative; top: -7px;">Contract Cost (PhP)</h2>
+                                    </div>
+                                    <div id = "ABCdetails">
+                                        <div id="ABCGrid">
+                                            <div class="ABC-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -80px;">
+                                                    <p>Total:</p>
+                                                </div>
+                                                <p class="ABC-text" style = "position: relative; top:-56px;">Details 1
+                                                </p>
+                                            </div>
+
+                                            <div class="ABC-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -70px;">
+                                                    <p>MOOE:</p>
+                                                </div>
+                                                <p class="ABC-text" style = "position: relative; top:-56px;">Details 1
+                                                </p>
+                                            </div>
+
+                                            <div class="ABC-container">
+                                                <div
+                                                    id = "text"style="position: relative; top: -50px; left: -85px;">
+                                                    <p>CO:</p>
+                                                </div>
+                                                <p class="ABC-text" style = "position: relative; top:-56px;">Details 1
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id = "observerFunds">
+                                        <div id="FundsGrid">
+                                            <div class="Funds-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -315px;">
+                                                    <p>List of Invited Observers:</p>
+                                                </div>
+                                                <p class="Funds-text" style = "position: relative; top:-56px;">Details
+                                                    1</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id = "dateheader">
+                                        <h2 style = "position:relative; top: -7px;">Date of Receipt of Invitation</h2>
+                                    </div>
+
+                                    <div id = "invitationInfo">
+                                        <div id="annualContainerGrid">
+                                            <div class="annual-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -80px;">
+                                                    <p> Pre-Proc Conference:</p>
+                                                </div>
+                                                <p class="annual-text" style = "position: relative; top:-56px;">
+                                                    Details 1</p>
+                                            </div>
+
+                                            <div class="annual-container" style = "position: relative; right: 100px;">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -95px;">
+                                                    <p>Eligibility Check:</p>
+                                                </div>
+                                                <p class="annual-text" style = "position: relative; top:-56px;">
+                                                    Details 1</p>
+                                            </div>
+
+                                            <div class="annual-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -90px;">
+                                                    <p>Sub/Open of Bids:</p>
+                                                </div>
+                                                <p class="annual-text" style = "position: relative; top:-56px;">
+                                                    Details 1</p>
+                                            </div>
+
+                                            <div class="annual-container" style = "position: relative; right: 100px;">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -100px; display:inline-flex;">
+                                                    <p>Bid Evaluation:</p>
+                                                </div>
+                                                <p class="annual-text" style = "position: relative; top:-74px;">
+                                                    Details 1</p>
+                                            </div>
+
+                                            <div class="annual-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -115px;">
+                                                    <p>Post Qual:</p>
+                                                </div>
+                                                <p class="annual-text" style = "position: relative; top:-58px;">
+                                                    Details 1</p>
+                                            </div>
+
+                                            <div class="annual-container" style = "position: relative; right: 100px;">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -5px; display:inline-flex;">
+                                                    <p>Delivery/ Completion/ Acceptance if applicable:</p>
+                                                </div>
+                                                <p class="annual-text" style = "position: relative; top:-70px;">
+                                                    Details 1</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id = "remarks">
+                                        <div id="FundsGrid">
+                                            <div class="Funds-container">
+                                                <div id = "text"
+                                                    style = "position: relative; top: -50px; left: -235px;">
+                                                    <p>Remarks (Explaining changes from the APP):</p>
+                                                </div>
+                                                <p class="Funds-text" style = "position: relative; top:-56px;">
+                                                    Details
+                                                    1</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id = "remarks">
+                                        <div id="FundsGrid">
+                                            <div id = "text"
+                                                style = "position: relative; top: -50px; left: -135px;">
+                                                <p>Procurement Status (Completed/ Ongoing/ Failed Procurement):</p>
+                                                <p
+                                                    style="font-weight: bold; border-radius: 5px; padding: 3px 6px; background-color: #33FF00;">
+                                                    Completed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
 
     </body>
 </x-layouts.app>
