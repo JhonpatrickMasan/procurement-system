@@ -386,6 +386,12 @@
 
     </body>
     <script>
+        function logout() {
+            // Code to perform logout actions, such as clearing session data or redirecting to a logout page
+            // For example:
+            window.location.href = "/logout"; // Redirect to the logout page
+        }
+
         function goBack() {
             window.history.back();
         }

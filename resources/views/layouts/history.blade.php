@@ -1,4 +1,5 @@
 <x-layouts.app>
+
     <head>
         <livewire:styles />
         <meta charset="UTF-8">
@@ -6,39 +7,50 @@
         <title>Dashboard</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <style>
-            body, html {
+            body,
+            html {
                 margin: 0;
                 padding: 0;
                 font-family: 'Inter', sans-serif;
                 background-color: #D6D7D8f0;
-                overflow-y: auto; /* Prevent scrolling */
+                overflow-y: auto;
+                /* Prevent scrolling */
             }
 
             #menu {
-        position: absolute; /* Change position to absolute */
-        background-color: #2D349A;
-        color: #fff;
-        padding: 40px;
-        text-align: left;
-        width: 240px;
-        height: 1100px;
-        overflow-y: auto;
-        z-index: 500;
-        top: 102px; /* Position menu at the top of the viewport */
-        left: 0; /* Position menu at the left of the viewport */
-    }
+                position: absolute;
+                /* Change position to absolute */
+                background-color: #2D349A;
+                color: #fff;
+                padding: 40px;
+                text-align: left;
+                width: 240px;
+                height: 1100px;
+                overflow-y: auto;
+                z-index: 500;
+                top: 102px;
+                /* Position menu at the top of the viewport */
+                left: 0;
+                /* Position menu at the left of the viewport */
+            }
 
             #userPhoto {
-                width: 100px; /* Set the width of the profile photo */
-                height: 100px; /* Set the height of the profile photo */
-                border-radius: 50%; /* Make it circular */
-                margin-bottom: 10px; /* Added margin below the user's position */
+                width: 100px;
+                /* Set the width of the profile photo */
+                height: 100px;
+                /* Set the height of the profile photo */
+                border-radius: 50%;
+                /* Make it circular */
+                margin-bottom: 10px;
+                /* Added margin below the user's position */
                 overflow: hidden;
             }
 
             #userPhoto img {
-                width: 100%; /* Make the image fill the container */
-                height: auto; /* Maintain aspect ratio */
+                width: 100%;
+                /* Make the image fill the container */
+                height: auto;
+                /* Maintain aspect ratio */
             }
 
             /* Separator added below the user's position */
@@ -54,25 +66,29 @@
             #userName {
                 color: #fff;
                 font-weight: bold;
-                margin-bottom: 10px; /* Added margin below the user's name */
+                margin-bottom: 10px;
+                /* Added margin below the user's name */
             }
 
             #welcomeText {
                 color: #fff;
-                margin-bottom: 20px; /* Added margin below the welcome text */
+                margin-bottom: 20px;
+                /* Added margin below the welcome text */
             }
 
             #menu a {
                 color: #fff;
                 text-decoration: none;
-                margin: 15px 0; /* Adjusted vertical margin */
+                margin: 15px 0;
+                /* Adjusted vertical margin */
                 font-size: 16px;
                 display: flex;
                 align-items: center;
             }
 
             #menu a i {
-                margin-right: 10px; /* Added margin to the right of the icon */
+                margin-right: 10px;
+                /* Added margin to the right of the icon */
             }
 
             #menu a:hover {
@@ -82,9 +98,11 @@
             #logout {
                 color: #fff;
                 text-decoration: none;
-                margin-top: auto !important; /* Set margin-top to auto */
+                margin-top: auto !important;
+                /* Set margin-top to auto */
                 font-size: 16px;
-                cursor: pointer; /* Added cursor style */
+                cursor: pointer;
+                /* Added cursor style */
             }
 
             #topNav {
@@ -104,7 +122,8 @@
                 margin-top: 30px;
                 margin-right: 50px;
                 margin-left: 370px;
-                padding: 5px; /* Adjusted the padding to make it smaller */
+                padding: 5px;
+                /* Adjusted the padding to make it smaller */
                 background-color: #ffffff;
                 border-radius: 15px;
                 display: flex;
@@ -115,43 +134,47 @@
 
 
             #content {
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 350px;
-    padding-top: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: bottom;
-    background-color: #ffffff;
-    border-radius: 15px;
-    height: 800px;
-    width: 950px;
-    overflow-x: auto; /* Add overflow-x for horizontal scrolling if needed */
-}
+                margin-top: 20px;
+                margin-right: 20px;
+                margin-left: 350px;
+                padding-top: 200px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: bottom;
+                background-color: #ffffff;
+                border-radius: 15px;
+                height: 800px;
+                width: 950px;
+                overflow-x: auto;
+                /* Add overflow-x for horizontal scrolling if needed */
+            }
 
-    #searchContainer {
-        margin-bottom: 5px; /* Adjusted margin bottom */
-        margin-top: -150px;
-    }
+            #searchContainer {
+                margin-bottom: 5px;
+                /* Adjusted margin bottom */
+                margin-top: -150px;
+            }
 
-    #listViewContainer {
-    margin-top: 20px;
-    width: 100%;
-    overflow-x: auto; /* Add overflow-x for horizontal scrolling if needed */
-}
+            #listViewContainer {
+                margin-top: 20px;
+                width: 100%;
+                overflow-x: auto;
+                /* Add overflow-x for horizontal scrolling if needed */
+            }
 
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 15px;
-}
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border-radius: 15px;
+            }
 
-table th,
-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+            table th,
+            table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
             #welcomeMessage {
                 font-size: 18px;
             }
@@ -183,157 +206,181 @@ table td {
                 margin-left: 10px;
                 opacity: 1.0;
             }
+
             #searchContainer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px; /* Adjusted margin bottom */
-        margin-top: -75px;
-    }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 5px;
+                /* Adjusted margin bottom */
+                margin-top: -75px;
+            }
 
             #supplierNameSearchInput,
-    #categorySearchInput {
-        margin-top: 0; /* Adjusted margin top */
-        margin-bottom: 10px; /* Adjusted margin bottom */
-        border: 2px solid black;
-        border-radius: 8px;
-        background-color: #F0F0F0;
-        outline: none;
-        width: 200px;
-        height: 30px;
-        margin-right: 10px; /* Add margin between the inputs and the button */
-        opacity: 1.0;
-    }
+            #categorySearchInput {
+                margin-top: 0;
+                /* Adjusted margin top */
+                margin-bottom: 10px;
+                /* Adjusted margin bottom */
+                border: 2px solid black;
+                border-radius: 8px;
+                background-color: #F0F0F0;
+                outline: none;
+                width: 200px;
+                height: 30px;
+                margin-right: 10px;
+                /* Add margin between the inputs and the button */
+                opacity: 1.0;
+            }
 
-    a[href="{{ route('layouts.create') }}"] {
-        background-color: green;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-left: 10px; /* Adjusted margin */
-    }
+            a[href="{{ route('layouts.create') }}"] {
+                background-color: green;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin-left: 10px;
+                /* Adjusted margin */
+            }
 
-    #supplierListView {
-                margin-top: 20px; /* Adjust margin */
+            #supplierListView {
+                margin-top: 20px;
+                /* Adjust margin */
                 width: 100%;
             }
 
             .supplierListItem {
                 display: flex;
                 justify-content: space-between;
-                padding: 10px 20px; /* Adjust padding */
-                border-bottom: 1px solid #ddd; /* Add bottom border */
+                padding: 10px 20px;
+                /* Adjust padding */
+                border-bottom: 1px solid #ddd;
+                /* Add bottom border */
             }
 
             .supplierListItem:last-child {
-                border-bottom: none; /* Remove bottom border for the last item */
+                border-bottom: none;
+                /* Remove bottom border for the last item */
             }
 
-            .supplierListItem > span {
-                flex: 1; /* Distribute space evenly */
+            .supplierListItem>span {
+                flex: 1;
+                /* Distribute space evenly */
             }
 
-    #pagination {
-        text-align: center; /* Center the pagination */
-        margin-top: 20px; /* Add margin between table and pagination */
-        margin-right: 150px;
-        font-weight: bold;
-    }
+            #pagination {
+                text-align: center;
+                /* Center the pagination */
+                margin-top: 20px;
+                /* Add margin between table and pagination */
+                margin-right: 150px;
+                font-weight: bold;
+            }
 
-    #pagination a {
-        color: black; /* Change font color to black */
-        text-decoration: none; /* Remove underline */
-        margin: 0 5px; /* Add margin between pages */
-        margin-left: 25px;
-        font-weight: bold;
-    }
+            #pagination a {
+                color: black;
+                /* Change font color to black */
+                text-decoration: none;
+                /* Remove underline */
+                margin: 0 5px;
+                /* Add margin between pages */
+                margin-left: 25px;
+                font-weight: bold;
+            }
 
-    #pagination a.active {
-        color: blue; /* Change font color to blue for the active page */
-    }
+            #pagination a.active {
+                color: blue;
+                /* Change font color to blue for the active page */
+            }
 
-    #backButton {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+            #backButton {
+                background-color: black;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
 
-}
+            }
 
-#backButton i {
-    margin-right: 5px;
-}
+            #backButton i {
+                margin-right: 5px;
+            }
 
-.custom-divider {
-    border: none; /* Remove default border */
-    border-top: 2px solid #000; /* Set border on top */
-    width: 100%; /* Set the width */
-    margin: 10px auto; /* Center the divider and add margin */
-    margin-bottom: 20px;
-}
+            .custom-divider {
+                border: none;
+                /* Remove default border */
+                border-top: 2px solid #000;
+                /* Set border on top */
+                width: 100%;
+                /* Set the width */
+                margin: 10px auto;
+                /* Center the divider and add margin */
+                margin-bottom: 20px;
+            }
 
-#title {
-    position: relative;
-    top: 90px;
-    margin-right: 20px; /* Set right margin to auto to align to the left */
-    padding-right: 200px;
-    text-align: center; /* Align the text to the left */
-    background-color: transparent;
-    border-radius: 15px;
-    height: 30px;
-}
+            #title {
+                position: relative;
+                top: 90px;
+                margin-right: 20px;
+                /* Set right margin to auto to align to the left */
+                padding-right: 200px;
+                text-align: center;
+                /* Align the text to the left */
+                background-color: transparent;
+                border-radius: 15px;
+                height: 30px;
+            }
 
-#searchContainer {
-    position: relative; /* Change position to relative */
-    top: 180px; /* Adjust top position to overlap with content */
-    margin-right: 50px;
-    margin-left: 250px;
-    padding: 5px;
-    background-color: transparent; /* Set background color to transparent */
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: left;
-}
-
-
-
-
-
+            #searchContainer {
+                position: relative;
+                /* Change position to relative */
+                top: 180px;
+                /* Adjust top position to overlap with content */
+                margin-right: 50px;
+                margin-left: 250px;
+                padding: 5px;
+                background-color: transparent;
+                /* Set background color to transparent */
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: left;
+            }
         </style>
     </head>
 
     <body>
         <div id="menu">
             @auth
-            <div id="userPhoto">
-                @if(auth()->user()->profile_photo_path)
-                    <img src="{{ asset('storage/' . auth()->user()->profile_photo_path) }}" alt="Profile Photo">
-                @else
-                    <!-- Default profile photo or placeholder image -->
-                    <img src="{{ asset('storage/UoAqIOtb87mT4dmcvldVz6GyFtljRv-metaMzc1NDU1MTcxXzE4MDM1MDU3MDAwNTE3MzVfMzQyODU0NzAzNjI2NTM4MDk5MV9uLmpwZw==-.jpg') }}" alt="Profile Photo">
-                @endif
-            </div>
+                <div id="userPhoto">
+                    @if (auth()->user()->profile_photo_path)
+                        <img src="{{ asset('storage/' . auth()->user()->profile_photo_path) }}" alt="Profile Photo">
+                    @else
+                        <!-- Default profile photo or placeholder image -->
+                        <img src="{{ asset('storage/UoAqIOtb87mT4dmcvldVz6GyFtljRv-metaMzc1NDU1MTcxXzE4MDM1MDU3MDAwNTE3MzVfMzQyODU0NzAzNjI2NTM4MDk5MV9uLmpwZw==-.jpg') }}"
+                            alt="Profile Photo">
+                    @endif
+                </div>
 
-            <div id="welcomeText">Welcome!</div>
-            <div id="userName">{{ auth()->user()->name }}</div>
-            <div id="userPosition">{{ auth()->user()->position }}</div>
-            <!-- Separator -->
-            <div id="userPositionSeparator"></div>
-            <a href="#Dashboard" style="margin-bottom: 40px; margin-top: 40px;"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a href="#Information" style="margin-bottom: 40px;"><i class="fas fa-user"></i> Personal Information</a>
-            <a id="#Suppliers' Database" href="{{ route('supplier.table') }}" style="margin-bottom: 40px;"><i class="fas fa-sign-out-alt"></i> Suppliers' Database </a>
-            <a id="Monitoring" style="margin-bottom: 40px;"><i class="fas fa-chart-line"></i> Procurement Monitoring</a>
-            <a href="#Notifcation" style="margin-bottom: 40px;"><i class="fas fa-bell"></i> Notifications</a>
-            <a href="#Template" style="margin-bottom: 200px;"><i class="fas fa-star"></i> Template Hub</a>
-            <a id="logout" href="{{ url('/') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <div id="welcomeText">Welcome!</div>
+                <div id="userName">{{ auth()->user()->name }}</div>
+                <div id="userPosition">{{ auth()->user()->position }}</div>
+                <!-- Separator -->
+                <div id="userPositionSeparator"></div>
+                <a href="#Dashboard" style="margin-bottom: 40px; margin-top: 40px;"><i class="fas fa-tachometer-alt"></i>
+                    Dashboard</a>
+                <a href="#Information" style="margin-bottom: 40px;"><i class="fas fa-user"></i> Personal Information</a>
+                <a id="#Suppliers' Database" href="{{ route('supplier.table') }}" style="margin-bottom: 40px;"><i
+                        class="fas fa-sign-out-alt"></i> Suppliers' Database </a>
+                <a id="Monitoring" style="margin-bottom: 40px;"><i class="fas fa-chart-line"></i> Procurement Monitoring</a>
+                <a href="#Notifcation" style="margin-bottom: 40px;"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#Template" style="margin-bottom: 200px;"><i class="fas fa-star"></i> Template Hub</a>
+                <a id="logout" href="{{ url('/') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             @else
-            <p>You are not authenticated.</p>
+                <p>You are not authenticated.</p>
             @endauth
         </div>
 
@@ -353,12 +400,15 @@ table td {
 
         <div id="title">
             <div>
-                <a style="padding-top: 220px; text-decoration: none; color: black;" href="{{ route('info') }}">SUPLLIER'S INFORMATION</a>
-                <a style="padding-top: 220px; padding-left: 55px; text-decoration: none; color: black;" href="{{ route('history') }}">SUPPLIER'S HISTORY</a>
+                <a style="padding-top: 220px; text-decoration: none; color: black;"
+                    href="{{ route('info') }}">SUPLLIER'S INFORMATION</a>
+                <a style="padding-top: 220px; padding-left: 55px; text-decoration: none; color: black;"
+                    href="{{ route('history') }}">SUPPLIER'S HISTORY</a>
             </div>
         </div>
 
-        <div id="searchContainer" style="display: flex; align-items: center; justify-content: space-between; padding-left: 100px;">
+        <div id="searchContainer"
+            style="display: flex; align-items: center; justify-content: space-between; padding-left: 100px;">
             <div>
                 <div id="header" style="display: flex; align-items: center;">
                     <h3 style="margin-left: 100px; padding-right: 400px;">SUPPLIER'S INFORMATION</h3>
@@ -370,8 +420,11 @@ table td {
                     <hr class="custom-divider">
                 </div>
                 <label for="searchInput">Search a Category:</label>
-                <input type="text" id="categorySearchInput" placeholder="Category..." oninput="filterSupplierTable('category')">
-                <a href="{{ route('layouts.create') }}" style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Create New Supplier</a>
+                <input type="text" id="categorySearchInput" placeholder="Category..."
+                    oninput="filterSupplierTable('category')">
+                <a href="{{ route('layouts.create') }}"
+                    style="background-color: green; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-left: 10px;">Create
+                    New Supplier</a>
             </div>
 
         </div>
@@ -387,8 +440,8 @@ table td {
                 <!-- Pagination links will be dynamically populated here -->
             </div>
 
-            </div>
-            <script>
+        </div>
+        <script>
             function populateSupplierListView(suppliers) {
                 var listView = document.getElementById('supplierListView');
                 listView.innerHTML = ''; // Clear previous content
@@ -544,30 +597,186 @@ table td {
             }
 
             // Sample data for testing
-            var sampleSuppliers = [
-                {code:"50299070" , project:"Digitization of PLM Through Integrated Systems" , pmo: "ICTO", activity: "NO" , mode: "Competitive Bidding" , posting: "Q2" , submission: "Q2" , notice: "Q2" , con: "Q2" , funds: "GoP" , total: "12,000,000.00" , mooe: "12,000,000.00" , co: "" , rem: "Resort to NP 53.14 - Online Subscription if applicable" ,},
-                {code:"50299990" , project:"Provision for Food and Materials on Student Activities" , pmo: "OGTS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "200,000.00" , mooe: "200,000.00" , co: "" , rem: "" ,},
-                {code:"10705110" , project:"Binocular Microscopes" , pmo: "CM", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "N.A." , submission: "N.A." , notice: "N.A." , con: "N.A." , funds: "GoP" , total: "660,000.00" , mooe: "" , co: "660,000.00" , rem: "" ,},
-                {code:"50213040" , project:"Soundproofing of Broadcast Room" , pmo: "CHASS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q2" , submission: "Q2" , notice: "Q3" , con: "Q3" , funds: "GoP" , total: "500,000.00" , mooe: "500,000.00" , co: "" , rem: "" ,},
-                {code:"50299990" , project:"Provision for Purchase of Cadavers" , pmo: "CM-MF", activity: "NO" , mode: "Competitive Bidding" , posting: "Q1" , submission: "Q1" , notice: "Q1" , con: "Q2" , funds: "GoP" , total: "1,056,000.00" , mooe: "1,056,000.00" , co: "" , rem: "Resort to NP-53.9 Small Value Procurement if applicable" ,},
-                {code:"50205030" , project:"Internet Subscription for PLM" , pmo: "ICTO", activity: "NO" , mode: "Competitive Bidding" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "5,000,000.00" , mooe: "5,000,000.00" , co: "" , rem: "Resort ot Direct Contracting under WETI Guidelines if applicable" ,},
-                {code:"50299990" , project:"Food and Materials for Review & Revision of Student Manual" , pmo: "OSDS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "300,000.00" , mooe: "300,000.00" , co: "" , rem: "" ,},
-                {code:"50205030" , project:"Renovation of Justo Alber Auditorium" , pmo: "PFMO", activity: "NO" , mode: "Competitive Bidding" , posting: "Q2" , submission: "Q2" , notice: "Q2" , con: "Q2" , funds: "GoP" , total: "2,981,000.00" , mooe: "" , co: "2,981,000.00" , rem: "" ,},
-                {code:"50203090" , project:"Provision of fuel for university vehicles" , pmo: "PSO", activity: "NO" , mode: "NP-53.14 Direct Retail Purchase of Petroleum Fuel, Oil and Lubricant (POL) Products and Airline Tickets" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "2,000,000.00" , mooe: "2,000,000.00" , co: "" , rem: "" ,},
-                {code:"50203080" , project:"Medical & Dental Supplies " , pmo: "UHS", activity: "NO" , mode: "NP-53.9 Small Value Procurement" , posting: "Q1-Q4" , submission: "Q1-Q4" , notice: "Q1-Q4" , con: "Q1-Q4" , funds: "GoP" , total: "448,366.00" , mooe: "448,366.00" , co: "" , rem: "" ,},
+            var sampleSuppliers = [{
+                    code: "50299070",
+                    project: "Digitization of PLM Through Integrated Systems",
+                    pmo: "ICTO",
+                    activity: "NO",
+                    mode: "Competitive Bidding",
+                    posting: "Q2",
+                    submission: "Q2",
+                    notice: "Q2",
+                    con: "Q2",
+                    funds: "GoP",
+                    total: "12,000,000.00",
+                    mooe: "12,000,000.00",
+                    co: "",
+                    rem: "Resort to NP 53.14 - Online Subscription if applicable",
+                },
+                {
+                    code: "50299990",
+                    project: "Provision for Food and Materials on Student Activities",
+                    pmo: "OGTS",
+                    activity: "NO",
+                    mode: "NP-53.9 Small Value Procurement",
+                    posting: "Q1-Q4",
+                    submission: "Q1-Q4",
+                    notice: "Q1-Q4",
+                    con: "Q1-Q4",
+                    funds: "GoP",
+                    total: "200,000.00",
+                    mooe: "200,000.00",
+                    co: "",
+                    rem: "",
+                },
+                {
+                    code: "10705110",
+                    project: "Binocular Microscopes",
+                    pmo: "CM",
+                    activity: "NO",
+                    mode: "NP-53.9 Small Value Procurement",
+                    posting: "N.A.",
+                    submission: "N.A.",
+                    notice: "N.A.",
+                    con: "N.A.",
+                    funds: "GoP",
+                    total: "660,000.00",
+                    mooe: "",
+                    co: "660,000.00",
+                    rem: "",
+                },
+                {
+                    code: "50213040",
+                    project: "Soundproofing of Broadcast Room",
+                    pmo: "CHASS",
+                    activity: "NO",
+                    mode: "NP-53.9 Small Value Procurement",
+                    posting: "Q2",
+                    submission: "Q2",
+                    notice: "Q3",
+                    con: "Q3",
+                    funds: "GoP",
+                    total: "500,000.00",
+                    mooe: "500,000.00",
+                    co: "",
+                    rem: "",
+                },
+                {
+                    code: "50299990",
+                    project: "Provision for Purchase of Cadavers",
+                    pmo: "CM-MF",
+                    activity: "NO",
+                    mode: "Competitive Bidding",
+                    posting: "Q1",
+                    submission: "Q1",
+                    notice: "Q1",
+                    con: "Q2",
+                    funds: "GoP",
+                    total: "1,056,000.00",
+                    mooe: "1,056,000.00",
+                    co: "",
+                    rem: "Resort to NP-53.9 Small Value Procurement if applicable",
+                },
+                {
+                    code: "50205030",
+                    project: "Internet Subscription for PLM",
+                    pmo: "ICTO",
+                    activity: "NO",
+                    mode: "Competitive Bidding",
+                    posting: "Q1-Q4",
+                    submission: "Q1-Q4",
+                    notice: "Q1-Q4",
+                    con: "Q1-Q4",
+                    funds: "GoP",
+                    total: "5,000,000.00",
+                    mooe: "5,000,000.00",
+                    co: "",
+                    rem: "Resort ot Direct Contracting under WETI Guidelines if applicable",
+                },
+                {
+                    code: "50299990",
+                    project: "Food and Materials for Review & Revision of Student Manual",
+                    pmo: "OSDS",
+                    activity: "NO",
+                    mode: "NP-53.9 Small Value Procurement",
+                    posting: "Q1-Q4",
+                    submission: "Q1-Q4",
+                    notice: "Q1-Q4",
+                    con: "Q1-Q4",
+                    funds: "GoP",
+                    total: "300,000.00",
+                    mooe: "300,000.00",
+                    co: "",
+                    rem: "",
+                },
+                {
+                    code: "50205030",
+                    project: "Renovation of Justo Alber Auditorium",
+                    pmo: "PFMO",
+                    activity: "NO",
+                    mode: "Competitive Bidding",
+                    posting: "Q2",
+                    submission: "Q2",
+                    notice: "Q2",
+                    con: "Q2",
+                    funds: "GoP",
+                    total: "2,981,000.00",
+                    mooe: "",
+                    co: "2,981,000.00",
+                    rem: "",
+                },
+                {
+                    code: "50203090",
+                    project: "Provision of fuel for university vehicles",
+                    pmo: "PSO",
+                    activity: "NO",
+                    mode: "NP-53.14 Direct Retail Purchase of Petroleum Fuel, Oil and Lubricant (POL) Products and Airline Tickets",
+                    posting: "Q1-Q4",
+                    submission: "Q1-Q4",
+                    notice: "Q1-Q4",
+                    con: "Q1-Q4",
+                    funds: "GoP",
+                    total: "2,000,000.00",
+                    mooe: "2,000,000.00",
+                    co: "",
+                    rem: "",
+                },
+                {
+                    code: "50203080",
+                    project: "Medical & Dental Supplies ",
+                    pmo: "UHS",
+                    activity: "NO",
+                    mode: "NP-53.9 Small Value Procurement",
+                    posting: "Q1-Q4",
+                    submission: "Q1-Q4",
+                    notice: "Q1-Q4",
+                    con: "Q1-Q4",
+                    funds: "GoP",
+                    total: "448,366.00",
+                    mooe: "448,366.00",
+                    co: "",
+                    rem: "",
+                },
                 // Add more sample suppliers as needed
             ];
 
             // Populate the supplier list view and pagination on page load
             document.addEventListener('DOMContentLoaded', function() {
                 populateSupplierListView(sampleSuppliers.slice(0, 10)); // Initial population with first 10 items
-                populatePaginationLinks(1, Math.ceil(sampleSuppliers.length / 10)); // Calculate total pages based on data length
+                populatePaginationLinks(1, Math.ceil(sampleSuppliers.length /
+                10)); // Calculate total pages based on data length
             });
 
             function goBack() {
-    window.history.back();
-}
-            </script>
+                window.history.back();
+            }
+
+            function logout() {
+                // Code to perform logout actions, such as clearing session data or redirecting to a logout page
+                // For example:
+                window.location.href = "/logout"; // Redirect to the logout page
+            }
+        </script>
 
     </body>
-    </x-layouts.app>
+</x-layouts.app>

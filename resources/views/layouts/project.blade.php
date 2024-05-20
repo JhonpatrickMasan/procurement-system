@@ -258,7 +258,6 @@
                 top: -120px;
                 right: 50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
@@ -273,24 +272,18 @@
                 top: -70px;
                 right: 50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                width: 935px;
+                width: 1073px;
                 height: 550px;
-
             }
 
             .custom-divider {
                 border: none;
-                /* Remove default border */
                 border-top: 2px solid #000;
-                /* Set border on top */
                 width: 80%;
-                /* Set the width */
                 margin: 10px auto;
-                /* Center the divider and add margin */
                 margin-bottom: 20px;
             }
 
@@ -302,9 +295,7 @@
                 position: absolute;
                 border-left: 2px solid #000;
                 height: 50px;
-                /* Adjust height as needed */
                 top: 20px;
-                /* Adjust top position as needed */
             }
 
             .vertical-lines {
@@ -314,28 +305,23 @@
             .circle {
                 position: relative;
                 top: -8px;
-                /* Adjust as needed */
                 background-color: #9B760A;
-                /* Adjust circle background color */
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
             }
 
             #details {
-
                 position: relative;
                 margin-top: 250px;
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 150px;
+                width: 1073px;
             }
 
             #textContainerGrid {
@@ -343,11 +329,8 @@
                 top: 40px;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                /* 3 columns */
                 gap: 20px;
-                /* Spacing between text containers */
                 justify-items: center;
-                /* Center align items horizontally */
                 margin-bottom: 20px;
             }
 
@@ -355,7 +338,6 @@
                 border: 2px solid #000;
                 padding: 10px;
                 width: 200px;
-                /* Adjust width as needed */
                 background-color: #E8E8E8;
                 border-radius: 5px;
                 height: 5px;
@@ -372,11 +354,8 @@
 
             #text p {
                 white-space: nowrap;
-                /* Prevent text from wrapping */
                 overflow: hidden;
-                /* Hide overflow text */
                 text-overflow: ellipsis;
-                /* Add ellipsis (...) for overflow text */
             }
 
             #contactheader {
@@ -385,13 +364,11 @@
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 935px;
-                height: 50px;
+                width: 1073px;
             }
 
             #contactdetails {
@@ -400,20 +377,17 @@
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 100px;
+                width: 1073px;
             }
 
             .contact-container {
                 border: 2px solid #000;
                 padding: 10px;
                 width: 400px;
-                /* Adjust width as needed */
                 background-color: #E8E8E8;
                 border-radius: 5px;
                 height: 5px;
@@ -425,11 +399,8 @@
                 top: 40px;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                /* 3 columns */
                 gap: 20px;
-                /* Spacing between text containers */
                 justify-items: center;
-                /* Center align items horizontally */
                 margin-bottom: 20px;
                 margin-left: 45px;
             }
@@ -440,13 +411,11 @@
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 935px;
-                height: 50px;
+                width: 1073px;
             }
 
             #conferencedetails {
@@ -455,13 +424,11 @@
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: transparent;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 550px;
+                width: 536.5px;
             }
 
             #conferencestatus {
@@ -470,13 +437,11 @@
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #ffffff;
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 465px;
-                height: 50px;
+                width: 536.5px;
             }
 
             #conferencestatus1 {
@@ -485,13 +450,37 @@
                 right: -560px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #ffffff;
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 365px;
-                height: 50px;
+                width: 500px;
+            }
+
+            #conferencestatus1 button {
+                position: relative;
+                top: -4px;
+                color: white;
+                border: none;
+                margin-top: 17px;
+                border-radius: 5px;
+                /* Optional: Remove border for cleaner look */
+                padding: 5px 10px;
+                /* Optional: Add padding for better appearance */
+                cursor: pointer;
+                /* Optional: Change cursor to pointer on hover */
+            }
+
+            #conferencestatus1 .approved {
+                background-color: #33A44C;
+            }
+
+            #conferencestatus1 .reject {
+                background-color: #C90000;
+            }
+
+            #conferencestatus1 .view-document {
+                background-color: black;
             }
 
             #Annualheader {
@@ -500,13 +489,11 @@
                 right: 10px;
                 top: -400px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 1035px;
-                height: 50px;
+                width: 1073px;
             }
 
             #AnnualInfo {
@@ -515,13 +502,11 @@
                 right: 10px;
                 top: -500px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 550px;
+                width: 1073px;
             }
 
             #annualContainerGrid {
@@ -530,11 +515,8 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 column-gap: 10px;
-                /* 3 columns */
                 gap: 20px;
-                /* Spacing between text containers */
                 justify-items: center;
-                /* Center align items horizontally */
                 margin-bottom: 20px;
             }
 
@@ -542,7 +524,6 @@
                 border: 2px solid #000;
                 padding: 10px;
                 width: 300px;
-                /* Adjust width as needed */
                 background-color: #E8E8E8;
                 border-radius: 5px;
                 height: 5px;
@@ -564,13 +545,11 @@
                 right: 10px;
                 top: 100px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 100px;
+                width: 1073px;
             }
 
             #FundsGrid {
@@ -579,11 +558,8 @@
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 column-gap: 10px;
-                /* 3 columns */
                 gap: 20px;
-                /* Spacing between text containers */
                 justify-items: center;
-                /* Center align items horizontally */
                 margin-bottom: 20px;
             }
 
@@ -591,7 +567,6 @@
                 border: 2px solid #000;
                 padding: 10px;
                 width: 800px;
-                /* Adjust width as needed */
                 background-color: #E8E8E8;
                 border-radius: 5px;
                 height: 5px;
@@ -613,13 +588,11 @@
                 right: 10px;
                 top: -50px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 100px;
+                width: 1073px;
             }
 
             #ABCGrid {
@@ -628,11 +601,8 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 column-gap: 10px;
-                /* 3 columns */
                 gap: 20px;
-                /* Spacing between text containers */
                 justify-items: center;
-                /* Center align items horizontally */
                 margin-bottom: 20px;
             }
 
@@ -640,7 +610,6 @@
                 border: 2px solid #000;
                 padding: 10px;
                 width: 200px;
-                /* Adjust width as needed */
                 background-color: #E8E8E8;
                 border-radius: 5px;
                 height: 5px;
@@ -662,14 +631,11 @@
                 right: 10px;
                 top: -30px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 100px;
-
+                width: 1073px;
             }
 
             #dateheader {
@@ -678,13 +644,11 @@
                 right: 10px;
                 top: -110px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 935px;
-                height: 50px;
+                width: 1073px;
             }
 
             #invitationInfo {
@@ -693,15 +657,11 @@
                 right: 10px;
                 top: -210px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 350px;
-
-
+                width: 1073px;
             }
 
             #remarks {
@@ -710,14 +670,13 @@
                 right: 10px;
                 top: -170px;
                 padding: 10px;
-                /* Adjusted the padding to make it smaller */
                 background-color: #fff;
                 border-radius: 4px;
                 display: center;
-                height: 50px;
-                width: 935px;
                 height: 100px;
+                width: 1073px;
             }
+
 
             .dropdown-btn {
                 background-color: #9B760A;
@@ -1029,11 +988,12 @@
                                     <h4 style = "position: relative; left: 150px; top: -45px;">statuses</h4>
                             </div>
 
-                            <div id = "conferencestatus1">
-                                <button style = "position: relative; top: -4px;">Approved</button>
-                                <button style = "position: relative; top: -4px;">Reject</button>
-                                <button style = "position: relative; top: -4px;">View Document</button>
+                            <div id="conferencestatus1">
+                                <button class="approved">Approved</button>
+                                <button class="reject">Reject</button>
+                                <button class="view-document">View Document</button>
                             </div>
+
 
                             <div id = "conferencestatus">
                                 <h4 style = "position: relative; right: 70px; top: -4px;">Minutes of Pre-Procurement
@@ -1042,10 +1002,10 @@
                                 <h4 style = "position: relative; left: 150px; top: -45px;">statuses</h4>
                             </div>
 
-                            <div id = "conferencestatus1">
-                                <button style = "position: relative; top: -4px;">Approved</button>
-                                <button style = "position: relative; top: -4px;">Reject</button>
-                                <button style = "position: relative; top: -4px;">View Document</button>
+                            <div id="conferencestatus1">
+                                <button class="approved">Approved</button>
+                                <button class="reject">Reject</button>
+                                <button class="view-document">View Document</button>
                             </div>
 
                         </div>
@@ -1328,6 +1288,11 @@
     </body>
 
     <script>
+        function logout() {
+            // Code to perform logout actions, such as clearing session data or redirecting to a logout page
+            // For example:
+            window.location.href = "/logout"; // Redirect to the logout page
+        }
         var dropdown = document.getElementsByClassName("dropdown-btn")[0];
         var dropdownContent = document.getElementsByClassName("dropdown-content")[0];
 

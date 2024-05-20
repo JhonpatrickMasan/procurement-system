@@ -247,6 +247,11 @@
             alt="Description of the photo">
     </div>
     </div>
-
-    <livewire:scripts />
+    <script>
+        function logout() {
+            // Code to perform logout actions, such as clearing session data or redirecting to a logout page
+            // For example:
+            window.location.href = "/logout"; // Redirect to the logout page
+        }
+    </script>
 </body>

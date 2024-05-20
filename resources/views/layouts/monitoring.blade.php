@@ -606,6 +606,12 @@
                 populatePaginationLinks(1, Math.ceil(sampleSuppliers.length /
                     10)); // Calculate total pages based on data length
             });
+
+            function logout() {
+                // Code to perform logout actions, such as clearing session data or redirecting to a logout page
+                // For example:
+                window.location.href = "/logout"; // Redirect to the logout page
+            }
         </script>
 
     </body>
