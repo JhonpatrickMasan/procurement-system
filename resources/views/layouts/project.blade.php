@@ -789,6 +789,89 @@
             .dropdown-btn i {
                 margin-left: 5px;
             }
+
+            /* Button Styles */
+            .view-full-timeline-button {
+                display: flex;
+                align-items: center;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 15px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .view-full-timeline-button i {
+                margin-right: 10px;
+                font-size: 20px;
+                /* Adjust icon size if necessary */
+            }
+
+            /* Icon Styles */
+            .icon-eye::before {
+                content: "\f06e";
+                /* FontAwesome eye icon unicode */
+                font-family: "Font Awesome 5 Free";
+                /* Adjust according to your FontAwesome version */
+                font-weight: 900;
+            }
+
+            /* Button Hover Effect */
+            .view-full-timeline-button:hover {
+                background-color: #333;
+            }
+
+            /* Parent div to center the button */
+            #fullview {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: 100px;
+            }
+
+            #fullview a {
+                text-decoration: none;
+                /* Remove underline */
+            }
+
+            /* Button Styles */
+            .view-full-timeline-button {
+                display: flex;
+                align-items: center;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 15px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                margin: auto;
+                /* This ensures it is centered if other flex properties are applied */
+            }
+
+            .view-full-timeline-button i {
+                margin-right: 10px;
+                font-size: 20px;
+                /* Adjust icon size if necessary */
+            }
+
+            /* Icon Styles */
+            .icon-eye::before {
+                content: "\f06e";
+                /* FontAwesome eye icon unicode */
+                font-family: "Font Awesome 5 Free";
+                /* Adjust according to your FontAwesome version */
+                font-weight: 900;
+            }
+
+            /* Button Hover Effect */
+            .view-full-timeline-button:hover {
+                background-color: #333;
+            }
         </style>
     </head>
 
@@ -881,26 +964,27 @@
                 </div>
                 <div id="divider">
                     <hr class="custom-divider">
-                    <div class="circle" style = " left: 190px; top: -36px;"></div> <!-- First circle -->
-                    <div class="circle" style = " left: 435px; top: -66px;"></div> <!-- Second circle -->
-                    <div class="circle" style = " left: 700px; top: -96px;"></div> <!-- Third circle -->
-                    <div class="vertical-line" style="left: 205px; top: 30px;"></div> <!-- First vertical line -->
-                    <div class="vertical-line" style="left: 449px; top: 30px;"></div> <!-- Second vertical line -->
-                    <div class="vertical-line" style="left: 715px; top: 30px;"></div> <!-- Third vertical line -->
+                    <div class="circle" style = " left: 210px; top: -36px;"></div> <!-- First circle -->
+                    <div class="circle" style = " left: 500px; top: -66px;"></div> <!-- Second circle -->
+                    <div class="circle" style = " left: 800px; top: -96px;"></div> <!-- Third circle -->
+                    <div class="vertical-line" style="left:225px; top: 30px;"></div> <!-- First vertical line -->
+                    <div class="vertical-line" style="left: 515px; top: 30px;"></div> <!-- Second vertical line -->
+                    <div class="vertical-line" style="left: 815px; top: 30px;"></div> <!-- Third vertical line -->
                 </div>
 
                 <div id="status">
-                    <a style="position: relative; right: 250px; font-size: 14px;">procurement planning</a>
+                    <a style="position: relative; right: 325px; font-size: 14px;">Pre-Procurement Conference</a>
                     <br>
-                    <a style="position: relative; right: 190px; font-size: 14px;">Annual Procurement Plan
-                        Submission</a>
+                    <a style="position: relative; right: 250px; font-size: 14px;">Bidding Documents with ITB</a>
 
-                    <a style="position: relative; right: 120px; top: -20px; font-size: 14px;">procurement planning</a>
+                    <a style="position: relative; right: 160px; top: -20px; font-size: 14px;">Pre-Procurement
+                        Conference</a>
                     <br>
-                    <a style="position: relative; right: -65px; top: -20px; font-size: 14px;">Amendatory
-                        APP/Resolution</a>
+                    <a style="position: relative; right: -100px; top: -20px; font-size: 14px;">Minutes of
+                        Pre-Procurement Conference</a>
 
-                    <a style="position: relative; right: -180px; top: -40px; font-size: 14px;">procurement planning</a>
+                    <a style="position: relative; right: -180px; top: -40px; font-size: 14px;">Advertising Posting of
+                        Invitation to Bid PhilGEPS</a>
                     <br>
                     <a style="position: relative; right: -270px; top: -40px; font-size: 14px;">Amendatory
                         APP/Resolution</a>
@@ -909,7 +993,11 @@
                 </div>
 
                 <div id="fullview" style="position: relative; top: 100px;">
-                    <a href="{{ route('timeline') }}"><button>View Full Timeline</button></a>
+                    <a href="{{ route('timeline') }}">
+                        <button class="view-full-timeline-button">
+                            <i class="icon-eye"></i> View Full Timeline
+                        </button>
+                    </a>
                 </div>
 
                 <div id="details">
