@@ -155,6 +155,7 @@
                 background-color: transparent;
                 /* Fixed typo: removed semicolon */
                 height: 350px;
+                width: 2500px;
                 overflow-y: auto;
                 /* Enable vertical scrolling */
                 overflow-x: hidden;
@@ -262,7 +263,7 @@
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 935px;
+                width: 1073px;
             }
 
             #timeline {
@@ -504,7 +505,7 @@
                 border-radius: 4px;
                 display: center;
                 height: 50px;
-                width: 935px;
+                width: 1035px;
                 height: 50px;
             }
 
@@ -717,6 +718,118 @@
                 width: 935px;
                 height: 100px;
             }
+
+            .dropdown-btn {
+                background-color: #9B760A;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                top: 100%;
+                /* Align the top edge of the dropdown content with the bottom edge of the button */
+                left: 0;
+                /* Align the left edge of the dropdown content with the left edge of the button */
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown-btn:hover .dropdown-content {
+                display: block;
+            }
+
+            .common-button {
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                margin-left: 10px;
+                /* Add some space between buttons */
+            }
+
+            .common-button i {
+                margin-right: 5px;
+            }
+
+            .button-edit {
+                background-color: #3C94C5;
+            }
+
+            .button-return {
+                background-color: #000;
+            }
+
+            .button-another {
+                background-color: black;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-btn {
+                background-color: #9B760A;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                display: flex;
+                align-items: center;
+            }
+
+            .dropdown-btn i {
+                margin-left: 5px;
+            }
         </style>
     </head>
 
@@ -769,19 +882,35 @@
 
 
         <div id="content">
-            <div id="header">
-                <h3 style = "position: relative; right: 280px; top: -5px;">Information Technology Equipment</h3>
-                <a href="{{ route('amendment') }}"
-                    style="background-color: #9B760A; color: white; border-radius: 5px; text-decoration: none; position: relative; top: -40px; margin-left:400px;">Amendment</a>
-                <a href="{{ route('layouts.create') }}"
-                    style="background-color: green; color: white; border-radius: 5px; text-decoration: none; position: relative; top: -40px;">
-                    <i class="fas fa-edit"></i> Edit
-                </a>
-                <a href="{{ route('layouts.create') }}"
-                    style="background-color: green; color: white; border-radius: 5px; text-decoration: none; position: relative; top: -40px;">
-                    <i class="fas fa-arrow-left"></i> Return
-                </a>
+            <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Information Technology Equipment</h3>
+                <div style="display: flex; align-items: center;">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Amendment
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">View Documents</a>
+                            <a href="#">Accept</a>
+                            <a href="#">Reject</a>
+                        </div>
+                    </div>
+                    <form method="get" action="{{ route('layouts.create') }}" style="margin: 0;">
+                        @csrf
+                        <button type="submit" class="common-button button-edit">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                    </form>
+
+                    <form method="get" action="{{ route('layouts.create') }}" style="margin: 0;">
+                        @csrf
+                        <button type="submit" class="common-button button-return">
+                            <i class="fas fa-arrow-left"></i> Return
+                        </button>
+                    </form>
+                </div>
             </div>
+
 
             <div id="timeline">
                 <h3>Procurement Timeline</h3>
@@ -804,7 +933,8 @@
                 <div id="status">
                     <a style="position: relative; right: 250px; font-size: 14px;">procurement planning</a>
                     <br>
-                    <a style="position: relative; right: 190px; font-size: 14px;">Annual Procurement Plan Submission</a>
+                    <a style="position: relative; right: 190px; font-size: 14px;">Annual Procurement Plan
+                        Submission</a>
 
                     <a style="position: relative; right: 120px; top: -20px; font-size: 14px;">procurement planning</a>
                     <br>
@@ -1196,4 +1326,17 @@
                             </div>
 
     </body>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn")[0];
+        var dropdownContent = document.getElementsByClassName("dropdown-content")[0];
+
+        dropdown.addEventListener("click", function() {
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    </script>
 </x-layouts.app>

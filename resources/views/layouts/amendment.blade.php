@@ -25,7 +25,7 @@
                 padding: 40px;
                 text-align: left;
                 width: 240px;
-                height: auto;
+                height: 1100px;
                 overflow-y: auto;
                 z-index: 500;
                 top: 102px;
@@ -140,147 +140,67 @@
                 margin-bottom: 50px;
                 padding: 120px 50px;
                 text-align: center;
-                background-color: #fff;
+                background-color: transparent;
                 border-radius: 15px;
                 height: 450px;
+                display: flex;
+                justify-content: space-around;
+                /* Distribute columns evenly */
             }
 
-            #searchContainer {
-                margin-bottom: 5px;
-                /* Adjusted margin bottom */
-                margin-top: -150px;
-            }
-
-            table {
-                width: 100%;
-                /* Set table width to 100% */
-                border-collapse: collapse;
+            .col {
+                width: 30%;
+                background-color: #ffffff;
                 border-radius: 15px;
-                /* Added rounded corners */
+                /* Adjust the width of each column as needed */
             }
 
-            table th,
-            table td {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-
-            #welcomeMessage {
-                font-size: 18px;
-            }
-
-            #searchBar {
-                display: flex;
-                align-items: center;
-                position: relative;
-                right: 25px;
-            }
-
-            #searchIcon {
-                position: absolute;
-                left: 15px;
-                cursor: pointer;
-                width: 20px;
+            .green-bar {
                 height: 20px;
-                opacity: 0.8;
-            }
-
-            #searchInput {
-                padding-left: 30px;
-                border: none;
-                border-radius: 8px;
-                background-color: #F0F0F0;
-                outline: none;
-                width: 200px;
-                height: 30px;
-                margin-left: 10px;
-                opacity: 1.0;
-            }
-
-            #searchContainer {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 5px;
-                /* Adjusted margin bottom */
-                margin-top: -75px;
-            }
-
-            #supplierNameSearchInput,
-            #categorySearchInput {
-                margin-top: 0;
-                /* Adjusted margin top */
-                margin-bottom: 10px;
-                /* Adjusted margin bottom */
-                border: 2px solid black;
-                border-radius: 8px;
-                background-color: #F0F0F0;
-                outline: none;
-                width: 200px;
-                height: 30px;
-                margin-right: 10px;
-                /* Add margin between the inputs and the button */
-                opacity: 1.0;
-            }
-
-            a[href="{{ route('layouts.create') }}"] {
+                /* Adjust height of the green bar */
                 background-color: green;
-                color: white;
-                padding: 10px 20px;
-                border-radius: 5px;
-                text-decoration: none;
-                margin-left: 10px;
-                /* Adjusted margin */
+                /* Set green color */
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
             }
 
-            #supplierListView {
-                margin-top: 20px;
-                /* Adjust margin */
-                width: 100%;
+            .black-bar {
+                height: 20px;
+
+                /* Adjust height of the black bar */
+                background-color: black;
+                /* Set black color */
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
             }
 
-            .supplierListItem {
-                display: flex;
-                justify-content: space-between;
-                padding: 10px 20px;
-                /* Adjust padding */
-                border-bottom: 1px solid #ddd;
-                /* Add bottom border */
-            }
-
-            .supplierListItem:last-child {
-                border-bottom: none;
-                /* Remove bottom border for the last item */
-            }
-
-            .supplierListItem>span {
-                flex: 1;
-                /* Distribute space evenly */
-            }
-
-            #pagination {
+            p {
                 text-align: center;
-                /* Center the pagination */
-                margin-top: 20px;
-                /* Add margin between table and pagination */
-                margin-right: 150px;
-                font-weight: bold;
+                /* Center-align text and icons */
             }
 
-            #pagination a {
-                color: black;
-                /* Change font color to black */
-                text-decoration: none;
-                /* Remove underline */
-                margin: 0 5px;
-                /* Add margin between pages */
-                margin-left: 25px;
-                font-weight: bold;
+            .button-column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                /* Add space between buttons */
             }
 
-            #pagination a.active {
-                color: blue;
-                /* Change font color to blue for the active page */
+            .button-column button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                background-color: #007bff;
+                /* Button color */
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .button-column button:hover {
+                background-color: #0056b3;
+                /* Button color on hover */
             }
         </style>
     </head>
@@ -345,10 +265,19 @@
         </div>
 
         <div id="content">
-            <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/438299148_1946847819050855_5320396018349860125_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGMFenxKQuw1bAUGQdBG7aY0UgvBfsGLrLRSC8F-wYuskLlXQv-cidS29TP80FImxY7_6jm7dMEWqt0tCmjsMtC&_nc_ohc=i5YzQ2RTI5gQ7kNvgFSOQHL&_nc_ht=scontent.fmnl14-1.fna&oh=00_AfDHRLIfrpFbRBXnKP3Wl-y5aYZ7fVgy0JR7ta13XfmVfg&oe=663E61B4"
-                alt="Description of the photo">
-        </div>
-
+            <div class="col">
+                <div class="black-bar"></div> <!-- Black bar for the second column -->
+                <!-- Add content here -->
+                <p style="text-align: center; padding-bottom: 25px; padding-top: 25px;">
+                    <strong>Amendment Form Document</strong><br>
+                </p>
+                <i class="fas fa-file-alt" style="font-size: 100px; padding-top 100px;"></i>
+                <div class="button-column" style="padding-top: 50px;">
+                    <button>View Document</button>
+                    <button>Approve</button>
+                    <button>Reject</button>
+                </div>
+            </div>
         </div>
     </body>
 </x-layouts.app>
