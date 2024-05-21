@@ -1365,7 +1365,8 @@
                                                 <p>Procurement Status (Completed/ Ongoing/ Failed Procurement):</p>
                                                 <p
                                                     style="font-weight: bold; border-radius: 5px; padding: 3px 6px; background-color: #33FF00;">
-                                                    Completed</p>
+                                                    Completed
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
