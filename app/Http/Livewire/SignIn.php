@@ -19,7 +19,6 @@ class SignIn extends Component
         $this->validate([
             'email' => 'required|email',
             'password' => 'required',
-            'phoneNumber' => 'required',
         ]);
 
         $credentials = [

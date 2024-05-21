@@ -1,12 +1,15 @@
 <x-layouts.app>
+
     <head>
         <style>
-            body, html {
+            body,
+            html {
                 margin: 0;
                 padding: 0;
                 font-family: 'Inter', sans-serif;
                 background-color: #D6D7D8f0;
-                overflow: hidden; /* Prevent scrolling */
+                overflow: hidden;
+                /* Prevent scrolling */
             }
 
             .full-background {
@@ -16,18 +19,22 @@
                 height: 100vh;
                 display: flex;
                 align-items: center;
-                justify-content: flex-start; /* Updated to move content to the left */
+                justify-content: flex-start;
+                /* Updated to move content to the left */
                 padding: 20px;
             }
 
             .login-form {
                 background-color: rgba(255, 255, 255);
-                padding: 60px; /* Adjustable padding */
+                padding: 60px;
+                /* Adjustable padding */
                 border-radius: 10px;
                 width: 300px;
                 text-align: center;
-                margin-left: 25px; /* Move to the right side */
-                margin-right: 140px; /* Adjust margin as needed */
+                margin-left: 25px;
+                /* Move to the right side */
+                margin-right: 140px;
+                /* Adjust margin as needed */
                 margin-bottom: 50px;
             }
 
@@ -43,14 +50,15 @@
                 font-weight: bold;
                 margin-bottom: -10px;
                 text-align: left;
-                color: #008CBA;
+                color: #2D349A;
             }
 
             h2 {
-                font-size: 18px; /* Adjusted font size for Sign In text */
+                font-size: 18px;
+                /* Adjusted font size for Sign In text */
                 margin-bottom: 20px;
                 text-align: left;
-                color: #008CBA;
+                color: #2D349A;
             }
 
             /* Style for the checkbox */
@@ -64,16 +72,19 @@
                 margin-right: 5px;
             }
 
-            .login-button, .signup-button, .return-button {
+            .login-button,
+            .signup-button,
+            .return-button {
                 font-weight: bold;
             }
 
             .login-button {
-                background-color: #008CBA;
+                background-color: #2D349A;
                 color: white;
                 padding: 10px;
                 border: none;
-                border-radius: 8px; /* Make it rounder */
+                border-radius: 8px;
+                /* Make it rounder */
                 cursor: pointer;
                 width: 100%;
                 margin-top: 10px;
@@ -84,7 +95,8 @@
                 color: black;
                 padding: 10px;
                 border: none;
-                border-radius: 8px; /* Make it rounder */
+                border-radius: 8px;
+                /* Make it rounder */
                 cursor: pointer;
                 width: 100%;
                 margin-top: 10px;
@@ -95,7 +107,8 @@
                 color: white;
                 padding: 10px;
                 border: none;
-                border-radius: 8px; /* Make it rounder */
+                border-radius: 8px;
+                /* Make it rounder */
                 cursor: pointer;
                 width: 100%;
                 margin-top: 10px;
@@ -111,18 +124,21 @@
             .separator-line {
                 flex: 1;
                 height: 1px;
-                background-color: #ddd; /* Adjust separator line color */
+                background-color: #ddd;
+                /* Adjust separator line color */
                 margin: 0 10px;
             }
 
             .or-text {
                 font-size: 14px;
-                color: rgba(85, 85, 85, 0.7); /* Adjust text color and opacity */
+                color: rgba(85, 85, 85, 0.7);
+                /* Adjust text color and opacity */
             }
 
             /* Style for bottom margin on labels */
             label {
-                margin-bottom: 5px; /* You can adjust this value */
+                margin-bottom: 5px;
+                /* You can adjust this value */
             }
 
             /* Style for the forgot password link */
@@ -130,17 +146,22 @@
                 font-size: 12px;
                 color: #008CBA;
                 cursor: pointer;
-                margin-left: 5px; /* Adjust margin as needed */
-                text-decoration: none; /* Remove underline */
+                margin-left: 5px;
+                /* Adjust margin as needed */
+                text-decoration: none;
+                /* Remove underline */
             }
 
             /* Style for thicker and rounder input fields */
             input[type="email"],
             input[type="password"],
             input[type="text"] {
-                padding: 12px; /* Increase padding for thickness */
-                border: 1px solid #ddd; /* Add border for thickness */
-                border-radius: 8px; /* Make it rounder */
+                padding: 12px;
+                /* Increase padding for thickness */
+                border: 1px solid #ddd;
+                /* Add border for thickness */
+                border-radius: 8px;
+                /* Make it rounder */
                 width: 100%;
                 box-sizing: border-box;
             }
@@ -156,7 +177,7 @@
             <div class="header-text">Procurement Office</div>
             <h2>Sign In</h2>
 
-            @if(session('error'))
+            @if (session('error'))
                 <p>{{ session('error') }}</p>
             @endif
 
@@ -164,21 +185,20 @@
                 <div style="margin-bottom: 15px;">
                     <label for="email">Email Address</label>
                     <input type="email" wire:model="email" required>
-                    @error('email') <span class="error">{{ $message }}</span> @enderror
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="text" wire:model="phoneNumber" required>
-                    @error('phoneNumber') <span class="error">{{ $message }}</span> @enderror
+                    @error('email')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div style="margin-bottom: 10px;">
                     <label for="password" style="display: flex; align-items: center;">Password
-                        <span class="forgot-password" style="margin-left: 120px;" wire:click="redirectToForgotPassword">Forgot Password?</span>
+                        <span class="forgot-password" style="margin-left: 120px;"
+                            wire:click="redirectToForgotPassword">Forgot Password?</span>
                     </label>
                     <input type="password" wire:model="password" required>
-                    @error('password') <span class="error">{{ $message }}</span> @enderror
+                    @error('password')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="checkbox-container">
@@ -186,7 +206,8 @@
                     <label for="keepSignedIn">Keep me signed in</label>
                 </div>
 
-                <button type="submit" class="login-button" wire:loading.attr="disabled" wire:target="signIn">Sign in</button>
+                <button type="submit" class="login-button" wire:loading.attr="disabled" wire:target="signIn">Sign
+                    in</button>
             </form>
 
             <div class="separator-lines">
@@ -209,7 +230,7 @@
 
     @push('scripts')
         <script>
-            document.addEventListener('livewire:load', function () {
+            document.addEventListener('livewire:load', function() {
                 // Your existing Livewire scripts, make sure not to remove anything outside this script tag
             });
         </script>
