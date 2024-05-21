@@ -190,6 +190,14 @@
                     @enderror
                 </div>
 
+                <div style="margin-bottom: 15px;">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" wire:model="phoneNumber" required>
+                    @error('phoneNumber')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
+                </div>
+
                 <div style="margin-bottom: 10px;">
                     <label for="password" style="display: flex; align-items: center;">Password
                         <span class="forgot-password" style="margin-left: 120px;"

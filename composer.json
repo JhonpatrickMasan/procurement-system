@@ -70,16 +70,19 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
-        }
+        },
+        "disable-tls": true,
+        "repositories": [
+            {
+                "type": "vcs",
+                "url": "https://github.com/asantibanez/livewire-charts"
+            },
+            {
+                "type": "composer",
+                "url": "https://packagist.org"
+            }
+        ]
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
-
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/asantibanez/livewire-charts"
-        }
-    ]
-
+    "prefer-stable": true
 }
